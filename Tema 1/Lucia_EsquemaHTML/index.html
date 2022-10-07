@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucia Mateos" />
+    <title>Tienda de informática</title>
+</head>
+
+<body>
+    <header>
+        <img id="logotipo" src="multimedia/índice.png" alt="imagen de PcComponentes">
+        <input type="search" name="busqueda" id="busqueda" size="150%">
+        <button>Registro</button>
+        <button>Carrito</button>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li>Menu1</li>
+                <li>Menu2</li>
+                <li>Menu3</li>
+                <li>Menu4</li>
+                <li>Menu5</li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <img src="multimedia/imagen.jpg">
+                <h2>Titulo</h2>
+                <p>Texto descriptivo para la imagen</p>
+            </article>
+            <article>
+                <img src="multimedia/imagen.jpg">
+                <h2>Titulo</h2>
+                <p>Texto descriptivo para la imagen</p>
+            </article>
+            <article>
+                <img src="multimedia/imagen.jpg">
+                <h2>Titulo</h2>
+                <p>Texto descriptivo para la imagen</p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <img src="multimedia/imagen.jpg">
+                <h2>Titulo</h2>
+                <p>Texto descriptivo para la imagen</p>
+            </article>
+            <article>
+                <img src="multimedia/imagen.jpg">
+                <h2>Titulo</h2>
+                <p>Texto descriptivo para la imagen</p>
+            </article>
+            <article>
+                <img src="multimedia/imagen.jpg">
+                <h2>Titulo</h2>
+                <p>Texto descriptivo para la imagen</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <p>Datos de la Tienda</p>
+        </section>
+        <section>
+            <p>Formulario</p>
+        </section>
+        <section>
+            <p>Redes sociales</p>
+        </section>
+    </footer>
+    <form action="enviar.php">
+        <fieldset>
+            <legend>Información:</legend>
+
+            <label for="nombre">Articulo:</label>
+            <input type="text" id="nombre" name="nombre" minlength="5" maxlength="100" required><br><br>
+
+            <label for="descripcion">Descripción:</label>
+            <textarea name="descripcion" rows="5" cols="20" required></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Clasificación:</legend>
+
+            <label for="destacado">Articulo destacado:</label>
+            <input type="checkbox" id="destacado" name="destacado"><br><br>
+
+            <label for="nombre">Categorias:</label><br>
+            <input type="radio" id="hardware" name="categoria" value="Hardware">
+            <label for="hardware">Hardware</label><br>
+            <input type="radio" id="software" name="categoria" value="Software">
+            <label for="software">Software</label><br>
+            <input type="radio" id="servicios" name="categoria" value="Servicios">
+            <label for="servicios">Servicios</label><br><br>
+
+            <label for="opciones">Categoria de hardware:</label>
+            <select id="opciones" name="opciones">
+                <option value="componentes">Componentes</option>
+                <option value="periféricos">Periféricos</option>
+                <option value="cableado">Cableado</option>
+                <option value="equipos">Equipos</option>
+            </select><br><br>
+
+            <button type="submit" onclick="alert('Enviado')">Enviar</button>
+            <button type="reset" onclick="alert('Limpiando...')">Limpiar datos</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>

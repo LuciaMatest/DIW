@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="html5, css, xhtml" />
+    <meta name="author" content="Lucia Mateos" />
+    <title>Ejemplo 1</title>
+    <link rel="icon" type="image/x-icon" href="doughnut_icon-icons.com_63187.ico">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Horario</h1>
+    <table style="width:100%">
+        <tr>
+            <th>HORAS</th>
+            <th>LUNES</th>
+            <th>MARTES</th>
+            <th>MIERCOLES</th>
+            <th>JUEVES</th>
+            <th>VIERNES</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td rowspan="2"><a href="https://www.w3schools.com/" target="_blank"><img src="php.png" alt="php" width="100"></a></td>
+            <td rowspan="3"><a href="https://www.w3schools.com/" target="_blank"><img src="php.png" alt="php" width="100"></a></td>
+            <td rowspan="2">DAW</td>
+            <td rowspan="3"><abbr title="Desarrollo Web Entorno Cliente">DWEC</abbr></td>
+            <td>DAW</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td rowspan="3"><abbr title="Desarrollo Web Entorno Cliente">DWEC</abbr></td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td rowspan="2"><del>EIE</del></td>
+            <td rowspan="3"><mark>DIW</mark></td>
+        </tr>
+        <tr>
+            <th>4</th>
+            <td rowspan="3"><mark>DIW</mark></td>
+            <td rowspan="3"><a href="https://www.w3schools.com/" target="_blank"><img src="php.png" alt="php"  width="100"></a></td>
+        </tr>
+        <tr>
+            <th>5</th>
+            <td rowspan="2"><abbr title="Desarrollo Web Entorno Cliente">DWEC</abbr></td>
+            <td rowspan="2"><a href="https://www.w3schools.com/" target="_blank"><img src="php.png" alt="php"  width="100"></a></td>
+        </tr>
+        <tr>
+            <th>6</th>
+            <td><del>EIE</del></td>
+        </tr>
+    </table>
+
+    <h1>Lista de Provincias</h1>
+    <ol type="I">
+        <li>Castilla y León
+            <ol type="a">
+                <li>Ávila</li>
+                <li>Burgos</li>
+                <li>León</li>
+                <li>Palencia</li>
+                <li>Salamanca</li>
+                <li>Segovia</li>
+                <li>Soria</li>
+                <li>Valladolid</li>
+                <li>Zamora</li>
+            </ol>
+        </li>
+        <li>Castilla la Mancha
+            <ol type="a">
+                <li>Albacete</li>
+                <li>Ciudad Real</li>
+                <li>Cuenca</li>
+                <li>Guadalajara</li>
+                <li>Toledo</li>
+            </ol>
+        </li>
+    </ol>
+
+
+</body>
+
+</html>
+
+<!--<h2>Titulo 2</h2>
+    <h3>Titulo 3</h3>
+    <h4>Titulo 4</h4>
+    <p>Hola mundo</p>
+    <strong>Hola mundo semantico</strong><br />
+    <em>Hola mundo semantico</em><br />
+    <small>Hola mundo semantico</small><br />
+    <mark>Hola mundo semantico</mark><br />
+    <del>Hola mundo semantico</del><br />
+    <sub>Subindice</sub><br />
+    <sup>Superindice</sup>
+    <p>
+        Hola a todo el mundo <q>tal y tal</q>
+    <blockquote cite="https://es.wikipedia.org/wiki/Zamora">Zamora</blockquote>
+    <abbr title="Organizacion no gubernamental">ONG</abbr>
+    <address>Calle Falsa</address>
+    </p>
+    <pre>
+        <code>
+        sadfkj
+        sadfkjsd
+        asdf
+        asdf
+        asdf
+        </code>
+    </pre>
+    <form action="procesar.php" method="get" name="miFormulario" id="miForm" autocomplete="on">
+        <input type="text" name="nombre" required="required" /><br />
+        <input type="password" name="pass" id="pass" /><br />
+        <input type="number" min="0" max="100" /><br />
+        <input type="number" step="10" /><br />
+        <input type="color" /><br />
+        <input type="range" min="0" max="20"><br />
+        <input type="search"><br />
+        <textarea rows="10" cols="30"></textarea><br />
+
+        <fieldset>
+            <legend name="Datos">Datos</legend>
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="genero" value="masculino" id="masculino">
+
+            <label for="femenino">Femenino</label>
+            <input type="radio" name="genero" value="femenino" id="femenino"><br />
+
+            <label for="mayorEdad">Mayor de edad</label>
+            <input type="checkbox" name="mayorEdad" id="mayorEdad" value="mayorEdad" checked="checked" />
+        </fieldset><br />
+
+        <select name="menu" id="menu">
+            <option value="tomate">Tomate</option>
+            <option value="cebolla">Cebolla</option>
+            <option value="pepino">Pepino</option>
+        </select><br />
+
+        <input list="postres" name="dessert" id="dessert">
+        <datalist id="postres">
+            <option value="natillas">natillas</option>
+            <option value="chocolate">chocolate</option>
+            <option value="pizza">pizza</option>
+        </datalist><br />
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar"><br />
+
+        <button type="button" onclick="alert('Error')">Click me</button>
+
+        disabled - desactivar
+        readonly - solo lectura
+        pattern - patrones
+        size - tamaño de la caja
+        maxlength - tamaño maximo de caracteres
+        value - valor por defecto
+        step - paso a paso -->
+
+<!-- <a href="https://www.w3schools.com/tags/tag_button.asp" target="_blank">
+            <img src="/Diseño de interfaces Web/índice.png" alt="Foto w3School" width="200" height="200">
+        </a> -->
+
+<!-- </form> -->
