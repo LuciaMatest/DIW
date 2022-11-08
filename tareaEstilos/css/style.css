@@ -1,3 +1,31 @@
 body{
-    background-color: gray;
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p{
+    color: gray;
+}
+
+.rojo{
+    font-weight: bold;
+    color: red;
+}
+
+.subrayado{
+    text-decoration: underline;
+    background-color: yellow;
+}
+
+.botones{
+    background-color: red;
+    color: white;
+}
+
+#logotipo{
+    width: 200px;
 }
