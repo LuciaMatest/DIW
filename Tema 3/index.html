@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .contendor{
+        .contenedor{
             background-color: darkolivegreen;
             display: flex;
         }
 
         .contenedor > div {
-            background-color: grey;
+            background-color: gray;
             width: 200px;
             margin: 10px;
             text-align: center;
@@ -20,18 +20,50 @@
             font-size: 30px;
         }
 
+        .contenedor > div#primero {
+            order: 5;
+        }
+
+        .contenedor > div#segundo {
+            order: 0;
+        }
+
+        .contenedor > div#tercero {
+            order: 1;
+        }
+
+        .contenedor > div#cuarto {
+            order: 3;
+        }
+
+        .contenedor > div#quinto {
+            order: 2;
+        }
+
+        .contenedor > div#sexto {
+            order: 4;
+        }
+
+        .contenedor > div#septimo {
+            order: 7;
+        }
+
+        .contenedor > div#octavo {
+            order: 6;
+        }
+
     </style>
 </head>
 <body>
     <div class="contenedor">
         <div id="primero">1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
+        <div id="segundo">2</div>
+        <div id="tercero">3</div>
+        <div id="cuarto">4</div>
+        <div id="quinto">5</div>
+        <div id="sexto">6</div>
+        <div id="septimo">7</div>
+        <div id="octavo">8</div>
     </div>
 </body>
 </html>
