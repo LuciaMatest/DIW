@@ -1,8 +1,7 @@
-/* *{
+* {
     margin: 0;
-} */
+}
 
-/* 1 */
 body {
     background-color: #d3d3d3;
     font-family: Arial, Helvetica, sans-serif;
@@ -19,11 +18,14 @@ header {
 
 #logotipo {
     width: 10%;
+    padding: 20px;
+    flex: 10%;
 }
 
 form.barra {
     margin: auto;
     width: 60%;
+    flex: 80%;
 }
 
 form.barra input {
@@ -58,7 +60,7 @@ form.barra button:hover {
 
 div.botones {
     border-radius: 10px;
-    padding: 10px;
+    flex: 10%;
 }
 
 .boton {
@@ -68,9 +70,14 @@ div.botones {
     padding: 10px 20px;
 }
 
+
+div.contenedor{
+    display: flex;
+}
+
 /* La barra de navegación */
 div.navegador {
-    display: flex;
+    flex: 20%;
 }
 
 nav {
@@ -81,7 +88,7 @@ nav {
 
 nav a {
     color: #ffffff;
-    padding: 10px;
+    padding: 15px 90px;
     text-decoration: none;
     text-align: center;
 }
@@ -93,8 +100,12 @@ nav a:hover {
 
 /* Cuerpo de la página */
 main {
-    display: flex;
+    flex: 80%;
     flex-wrap: wrap;
+}
+
+section {
+    display: flex;
 }
 
 /* Párrafos */
