@@ -1,43 +1,115 @@
+/* *{
+    margin: 0;
+} */
+
 /* 1 */
 body {
-    background-color: lightgray;
+    background-color: #d3d3d3;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* 2 */
+/* Cabecera */
 header {
     font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-/* 3 */
+#logotipo {
+    width: 10%;
+}
+
+form.barra {
+    margin: auto;
+    width: 60%;
+}
+
+form.barra input {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #808080;
+    float: left;
+    width: 90%;
+    background: #ffffff;
+}
+
+form.barra button {
+    float: left;
+    width: 5%;
+    padding: 10px;
+    background: #0d3465;
+    color: #ffffff;
+    font-size: 17px;
+    border: 1px solid #808080;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.barra button:hover {
+    background-color: #6495ed;
+    font-weight: bold;
+}
+
+#lupa {
+    width: 15px;
+}
+
+div.botones {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.boton {
+    background-color: #0d3465;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+/* La barra de navegación */
+div.navegador {
+    display: flex;
+}
+
+nav {
+    background-color: #0d3465;
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #6495ed;
+    font-weight: bold;
+}
+
+/* Cuerpo de la página */
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Párrafos */
 p {
-    color: gray;
+    color: #808080;
 }
 
 /* 4 */
 .rojo {
     font-weight: bold;
-    color: red;
+    color: #ff0000;
 }
 
 /* 5 */
 .subrayado {
     text-decoration: underline;
-    background-color: yellow;
-}
-
-/* 6 */
-.botones {
-    background-color: red;
-    color: white;
-}
-
-/* 7 */
-.menu{
-    background-color: cornflowerblue;
-    border: 3px solid rgb(47, 71, 114);
-}
-
-#logotipo {
-    width: 200px;
+    background-color: #ffff00;
 }
