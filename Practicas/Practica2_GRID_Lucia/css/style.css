@@ -1,31 +1,62 @@
-* {
-    margin: 0;
+*{
+    box-sizing: border-box;
 }
 
 body {
     background-color: #d3d3d3;
     font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    align-content: center;
+    grid-template-columns: 30% auto auto auto ;
 }
 
-/* Cabecera */
-header {
+h1, h2, h3, h4, h5{
     font-family: 'Times New Roman', Times, serif;
-    display: flex;
-    justify-content: center;
+} */
+
+h3 {
+    padding: 2px;
+}
+
+img.ordenador {
+    height: 250px;
+    width: 300px;
+    display:block;
+    margin:auto;
+}
+
+/* texto rojo */
+.rojo {
+    font-weight: bold;
+    color: #ff0000;
+} 
+
+/* subrayado amarillo */
+.subrayado {
+    text-decoration: underline;
+    background-color: #ffff00;
+}
+
+/* Encabezado */
+header {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-gap: 10px;
+    padding: 10px;
     align-items: center;
-    padding: 20px;
+    grid-area: 1 / 1 / 2 / 5;
+    border-bottom: 1px solid gray;
 }
 
 #logotipo {
-    width: 10%;
-    padding: 20px;
-    flex: 10%;
+    width: 150px;
+    padding: 15px;
 }
 
 form.barra {
     margin: auto;
-    width: 60%;
-    flex: 80%;
+    width: 100%;
+    grid-area: 1 / 2 / 2 / 3;
 }
 
 form.barra input {
@@ -38,15 +69,15 @@ form.barra input {
 }
 
 form.barra button {
-    float: left;
-    width: 5%;
+    width: 50px;
     padding: 10px;
     background: #0d3465;
     color: #ffffff;
-    font-size: 17px;
+    font-size: 10px;
     border: 1px solid #808080;
     border-left: none;
     cursor: pointer;
+    grid-area: 1 / 3 / 2 / 4;
 }
 
 form.barra button:hover {
@@ -60,37 +91,46 @@ form.barra button:hover {
 
 div.botones {
     border-radius: 10px;
-    flex: 10%;
+    flex: 20%;
+    text-align: center;
+}
+
+div.botones button:hover{
+    background-color: #6495ed;
 }
 
 .boton {
     background-color: #0d3465;
+    border: 1px solid #808080;
     color: #ffffff;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 10px 15px;
 }
 
-
+/* Contenedor general */
 div.contenedor{
-    display: flex;
+    grid-area: 2 / 1 / 4 / 5;
+    display: grid;
+    grid-template-columns: 20% auto auto auto;
 }
 
-/* La barra de navegación */
-div.navegador {
-    flex: 20%;
+/* Barra de navegación */
+.navegador {
+    grid-area: 1 / 1 / 5 / 2;
+    padding: 10px;
 }
 
-nav {
+nav{
     background-color: #0d3465;
-    display: flex;
-    flex-direction: column;
 }
 
 nav a {
+    display: block;
     color: #ffffff;
-    padding: 15px 90px;
+    padding: 10px 15px;
     text-decoration: none;
     text-align: center;
+    border: 0.5px solid lightgray;
 }
 
 nav a:hover {
@@ -100,27 +140,146 @@ nav a:hover {
 
 /* Cuerpo de la página */
 main {
-    flex: 80%;
-    flex-wrap: wrap;
+    grid-area: 1 / 2 / 4 / 5;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 }
 
-section {
-    display: flex;
+main > section {
+    border-bottom: 1px solid gray;
+    display: grid;
+}
+
+main > section > article{
+    display: grid;
+    grid-template-columns: auto;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    flex: 10%;
+    text-align: justify;
 }
 
 /* Párrafos */
 p {
     color: #808080;
+    font-size: 15px;
 }
 
-/* 4 */
-.rojo {
+/*Pie de página*/
+footer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #0d3465;
+    padding-bottom: 5px;
+    border-top: 2px solid black;
+    grid-area:  4 / 1 / 5 / 5;
+}
+
+footer > section {
+    flex: 10%;
+    flex-direction: column;
+    background-color: #d3d3d3;
+    margin: 15px;
+    padding: 15px;
+}
+
+footer > section > p.titulo{
+    color: black;
     font-weight: bold;
-    color: #ff0000;
 }
 
-/* 5 */
-.subrayado {
-    text-decoration: underline;
-    background-color: #ffff00;
+footer > section > p{
+    color: black;
+}
+
+footer > section > div.redes {
+    display: flex;
+    flex-direction: column;
+}
+
+footer > section > div.redes a {
+    margin: 5px;
+}
+
+/*Formulario*/
+.informacionArticulo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.clasificacionArticulo{
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.nombreArticulo{
+    float: left;
+    padding-right: 50px;
+}
+
+#nombre {
+    size: 50px;
+}
+
+.descripcionArticulo{
+    float: left;
+    padding-right: 20px;
+}
+
+#descripcion {
+    resize: none;
+}
+
+.botonFormulario {
+    background-color: #0d3465;
+    border: 1px solid #808080;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+/*Adaptación para tablet*/
+@media screen and (min-width: 768px){
+    
+}
+
+/*Adaptación para moviles*/
+@media only screen and (max-width: 600px) {
+    header {
+        display: grid;
+        grid-area: 1 / 1 / 2 / 4;
+    }
+
+    #logotipo {
+        grid-area: 1 / 1 / 1 / 1;
+    }
+
+    div.botones {
+        grid-area: 1 / 3 / 1 / 4;
+        padding-right: 20px;
+    }
+
+    form.barra {
+        padding-left: 20px;
+        padding-right: 20px;
+        grid-area: 2 / 1 / 2 / 4;
+    }
+
+    div.contenedor{
+        display: grid;
+        grid-area: 3 / 1 / 4 / 4;
+    }
+
+    .navegador {
+        grid-area: 1 / 1 / 4 / 1;
+    }
+
+    main {
+        display: grid;
+        grid-area: 1 / 2 / 4 / 4;
+    }
 }

@@ -1,21 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
     background-color: #d3d3d3;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Cabecera */
-header {
+h1, h2, h3, h4, h5{
     font-family: 'Times New Roman', Times, serif;
+}
+
+/* Encabezado */
+header {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding-bottom: 5px;
     border-bottom: 1px solid gray;
+    
 }
 
 #logotipo {
-    width: 10%;
-    padding: 20px;
+    width: 150px;
+    padding: 15px;
     flex: 10%;
 }
 
@@ -23,6 +34,7 @@ form.barra {
     margin: auto;
     width: 60%;
     flex: 70%;
+    padding-left: 50px;
 }
 
 form.barra input {
@@ -36,7 +48,7 @@ form.barra input {
 
 form.barra button {
     float: left;
-    width: 5%;
+    width: 50px;
     padding: 10px;
     background: #0d3465;
     color: #ffffff;
@@ -58,6 +70,7 @@ form.barra button:hover {
 div.botones {
     border-radius: 10px;
     flex: 20%;
+    text-align: center;
 }
 
 div.botones button:hover{
@@ -66,11 +79,13 @@ div.botones button:hover{
 
 .boton {
     background-color: #0d3465;
+    border: 1px solid #808080;
     color: #ffffff;
     border-radius: 10px;
     padding: 10px 15px;
 }
 
+/* Contenedor general */
 div.contenedor{
     display: flex;
     flex-wrap: wrap;
@@ -79,6 +94,7 @@ div.contenedor{
 /* La barra de navegación */
 aside.navegador {
     flex: 20%;
+    padding: 10px;
 }
 
 nav {
@@ -122,12 +138,12 @@ main > section > article{
     text-align: justify;
 }
 
-h2 {
-    padding: 5px;
+h3 {
+    padding: 2px;
 }
 
 img.ordenador {
-    height: 200px;
+    height: 250px;
     width: 300px;
     display:block;
     margin:auto;
@@ -136,6 +152,7 @@ img.ordenador {
 /* Párrafos */
 p {
     color: #808080;
+    font-size: 15px;
 }
 
 /* texto rojo */
@@ -155,15 +172,15 @@ footer{
     display: flex;
     flex-wrap: wrap;
     background-color: #0d3465;
-    margin: 10px;
+    
 }
 
 footer > section {
     flex: 10%;
     flex-direction: column;
     background-color: #d3d3d3;
-    margin: 20px;
-    padding: 5px;
+    margin: 15px;
+    padding: 15px;
 }
 
 footer > section > p.titulo{
@@ -184,13 +201,56 @@ footer > section > div.redes a {
     margin: 5px;
 }
 
+/*Formulario*/
+.informacionArticulo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.clasificacionArticulo{
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.nombreArticulo{
+    float: left;
+    padding-right: 50px;
+}
+
+#nombre {
+    size: 50px;
+}
+
+.descripcionArticulo{
+    float: left;
+    padding-right: 20px;
+}
+
+#descripcion {
+    resize: none;
+}
+
+.botonFormulario {
+    background-color: #0d3465;
+    border: 1px solid #808080;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
 /*Adaptación para tablet*/
 @media screen and (max-width: 992px) {
     .navegador, nav {
         flex-direction: column;
     }
     article {
-        width: 50%;
+        flex: 100%;
+        flex-direction: column;
+    }
+    section{
+        flex-direction: column;
     }
   }
 
@@ -200,34 +260,37 @@ footer > section > div.redes a {
         flex-direction: column;
     }
 
-    header {
-        display: flex;
-        flex-direction: column;
+    header{
+        flex-wrap: wrap;
+        padding-bottom: 10px;
     }
 
     #logotipo {
         display: flex;
-        width: 200px;
         float: left;
         order: 1;
+        max-width: 30%;
     }
 
     div.botones {
         order: 2;
         float: right;
+        text-align: right;
+        padding-right: 20px;
     }
 
     form.barra {
-        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
         order: 3;
     }
 
     form.barra input {
-        font-size: 15px;
         width: 90%;
     }
     
     form.barra button {
         width: 10%;
     }
+
 }
