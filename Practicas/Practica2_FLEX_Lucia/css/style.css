@@ -77,7 +77,7 @@ div.contenedor{
 }
 
 /* La barra de navegación */
-div.navegador {
+aside.navegador {
     flex: 20%;
 }
 
@@ -129,6 +129,8 @@ h2 {
 img.ordenador {
     height: 200px;
     width: 300px;
+    display:block;
+    margin:auto;
 }
 
 /* Párrafos */
@@ -182,9 +184,50 @@ footer > section > div.redes a {
     margin: 5px;
 }
 
-/*Adaptación para moviles*/
-@media only screen and (max-width: 600px) {
+/*Adaptación para tablet*/
+@media screen and (max-width: 992px) {
     .navegador, nav {
         flex-direction: column;
+    }
+    article {
+        width: 50%;
+    }
+  }
+
+/*Adaptación para moviles*/
+@media only screen and (max-width: 600px) {
+    .contenedor, .navegador, footer {
+        flex-direction: column;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #logotipo {
+        display: flex;
+        width: 200px;
+        float: left;
+        order: 1;
+    }
+
+    div.botones {
+        order: 2;
+        float: right;
+    }
+
+    form.barra {
+        width: 100%;
+        order: 3;
+    }
+
+    form.barra input {
+        font-size: 15px;
+        width: 90%;
+    }
+    
+    form.barra button {
+        width: 10%;
     }
 }
