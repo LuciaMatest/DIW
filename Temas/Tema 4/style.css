@@ -1,0 +1,19 @@
+/* Texto sombreado */
+.sombra{
+    text-shadow: 5px 5px 5px gray;
+}
+
+/* Contenedor sombreado  */
+.contenedor{
+    box-shadow:  6px 6px 15px black;
+}
+
+/* Contenedor sombreado de forma interna */
+.interior{
+    box-shadow:  15px 2px 20px green inset;
+}
+
+/* Texto con doble sombreado, se separa por comas */
+.doble{
+    text-shadow: 2px 2px 5px yellow, 6px 8px 1px gray;
+}
