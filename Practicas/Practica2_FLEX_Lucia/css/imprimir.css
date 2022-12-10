@@ -6,6 +6,15 @@ nav {
     display: none;
 }
 
+img.ordenador {
+    height: 250px;
+    width: 300px;
+    display:block;
+    margin:auto;
+    /* sombreado */
+    box-shadow: 5px 5px 30px gray;
+}
+
 footer{
     display: none;
 }
