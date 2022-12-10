@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: lightgray;
+}
+
+header img.logotipo{
+    padding: 15px;
+    height: 80px;
+    flex: 10%;
+}
+
+header a.inicio{
+    flex: 70%;
+}
+
+header a.login{
+    flex: 20%;
+}
+
+header img.icono_acceso{
+    height: 15px;
+}
+header a{
+    text-decoration:none;
+    color: rgb(48, 48, 48);
+}
+
+/* main img{
+    width: 25%;
+}
+
+main h2{
+    background-color: #008573;
+    color: white;
+    text-align: center;
+}
+
+footer{
+    background-color: #f94747;
+}
+
+div.enlaces a{
+    text-decoration:none;
+    color: white;
+}
+
+div.redes > a > img {
+    width: 2%;
+} */
