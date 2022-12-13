@@ -10,57 +10,20 @@ body {
 }
 
 /* Encabezado */
-header {
+header{
     display: flex;
-    flex-direction: row;
     align-items: center;
+    top: 8px;
+    left: 8px;
+    height: 110px;
+    padding-right: 32px;
+    padding-left: 32px;
     background-color: lightgray;
 }
 
-header img.logotipo {
-    padding: 15px;
-    width: 20%;
-    flex: 10%;
+.logo{
+    width: 200px;
+    position: relative;
 }
 
-header a.inicio {
-    padding: 15px;
-    flex: 80%;
-}
-
-header a.login {
-    padding: 15px;
-    flex: 10%;
-}
-
-header img.icono_acceso {
-    height: 15px;
-}
-
-header a {
-    text-decoration: none;
-    color: rgb(48, 48, 48);
-}
-
-/* main img{
-    width: 25%;
-}
-
-main h2{
-    background-color: #008573;
-    color: white;
-    text-align: center;
-}
-
-footer{
-    background-color: #f94747;
-}
-
-div.enlaces a{
-    text-decoration:none;
-    color: white;
-}
-
-div.redes > a > img {
-    width: 2%;
-} */
+/* https://www.etq-amsterdam.com/ */
