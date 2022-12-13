@@ -110,11 +110,15 @@ nav a {
     padding: 10px 15px;
     text-decoration: none;
     text-align: center;
+    transition: 1s linear;
+    transition: border 1s linear;
 }
 
 nav a:hover {
     background-color: #6495ed;
     font-weight: bold;
+    font-size: large;
+    border: 5px solid #0d3465;
 }
 
 /* Cuerpo de la página */
@@ -147,6 +151,11 @@ img.ordenador {
     width: 300px;
     display:block;
     margin:auto;
+    transition: 1s linear;
+}
+
+img.ordenador:hover {
+    transform: scale(1.1);
 }
 
 /* Párrafos */
