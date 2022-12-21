@@ -5,13 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         button{
-            padding: 3px 8px 2px 6px;
+            padding: 6px;
+            background-color: dimgrey;
+            border-radius: 20%;
         }
-        img {
-            width: 10%;
-            height: 10%;
+        button:hover{
+            background-color: gray;
+        }
+
+        i{
+            padding: 5px;
+            color: white;
+            font-size:20px;
         }
     </style>
     <title>Sombreado</title>
@@ -25,34 +33,68 @@
         <h1>Lucia</h1>
     </div> -->
 
-    <video poster="índice.jpg" controls muted loop>
+    <video id="videoGato" poster="indice.jpg" controls>
         <source src="videos/Untitled.mp4" type="video/mp4">
     </video>
     <br>
-    <div id="botones">
-        <button><img src="iconos/rebobinar.png" alt="play"></button>
-        <!-- <img src="iconos/play.png" alt="play">
-        <img src="iconos/stop.png" alt="play" >
-        <img src="iconos/adelantar.png" alt="play"> -->
+    <div class="botones">
+        <button id="botonUndo" onclick="reiniciarVideo()"><i class="fa fa-undo"></i></button>
+        <button id="botonPlay" onclick="iniciarVideo()"><i class="fa fa-play"></i></button>
+        <button id="botonPause" onclick="pausarVideo()"><i class="fa fa-pause"></i></button>
+        <button id="botonStop" onclick="pararVideo()"><i class="fa fa-stop"></i></button>
+        <button id="botonVel1" onclick="velocidadVideo1()"><i class="fa fa-forward">1.5x</i></button>
+        <button id="botonVel2" onclick="velocidadVideo2()"><i class="fa fa-forward">2x</i></button>
+        <button id="botonSilenciar" onclick="silenciarVideo()"><i class="fa fa-volume-down"></i></button>
+        <button id="botonSonido" onclick="sonidoVideo()"><i class="fa fa-volume-up"></i></button>
+        <button id="botonResolucion" onclick="resolucionVideo()"><i class="fa fa-image"></i></button>
     </div>
-    <br><br>
 
     <script>
-        function reproducirVideo() {
-            
+        function reiniciarVideo() {
+            let botonUndo = document.getElementById('botonUndo');
+            botonUndo.addEventListener('click', presionarUndo, false);
         }
-        function pausarVideo() {
-            
+
+        function presionarUndo() {
+            let video = document.getElementById('videoGato');
+            video.load();
+            video.play();
         }
+
         function iniciarVideo() {
-            
+            let botonPlay = document.getElementById('botonPlay');
+            botonPlay.addEventListener('click', presionarPlay, false);
         }
+
+        function presionarPlay() {
+            let video = document.getElementById('videoGato');
+            video.play();
+        }
+
         function pausarVideo() {
-            
+            let botonPause = document.getElementById('botonPause');
+            botonPause.addEventListener('click', presionarPause, false);
         }
+
+        function presionarPause() {
+            let video = document.getElementById('videoGato');
+            video.pause();
+        }
+
+        function pararVideo() {
+            let botonStop = document.getElementById('botonStop');
+            botonStop.addEventListener('click', presionarStop, false);
+        }
+
+        function presionarStop() {
+            let video = document.getElementById('videoGato');
+            video.load();
+            video.pause();
+        }
+        
     </script>
 <!-- -------------------------------------------------------------------------- -->
-    <audio id="audio" src="audio/every-day-56152.mp3"></audio>
+    <!-- <audio id="audio" src="audio/every-day-56152.mp3"></audio>
     <script>
         let audio = document.getElementById('audio');
         audio.onloadedmetadata = function () {
@@ -64,7 +106,7 @@
         }
         audio.volume = 0.4;
         audio.controls = true;
-    </script>
+    </script> -->
 
 </body>
 </html>
