@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <style>
+        button{
+            padding: 3px 8px 2px 6px;
+        }
+        img {
+            width: 10%;
+            height: 10%;
+        }
+    </style>
     <title>Sombreado</title>
 </head>
 <body>
@@ -17,18 +26,45 @@
     </div> -->
 
     <video poster="índice.jpg" controls muted loop>
-        <source src="Untitled.mp4" type="video/mp4">
+        <source src="videos/Untitled.mp4" type="video/mp4">
     </video>
-
     <br>
+    <div id="botones">
+        <button><img src="iconos/rebobinar.png" alt="play"></button>
+        <!-- <img src="iconos/play.png" alt="play">
+        <img src="iconos/stop.png" alt="play" >
+        <img src="iconos/adelantar.png" alt="play"> -->
+    </div>
+    <br><br>
 
-    <audio id="audio" src="every-day-56152.mp3">
-        <script>
-            let audio = document.getElementById('audio');
-            audio.volume = 0.4;
-            audio.duration = true;
-            audio.controls = true;
-        </script>
-    </audio>
+    <script>
+        function reproducirVideo() {
+            
+        }
+        function pausarVideo() {
+            
+        }
+        function iniciarVideo() {
+            
+        }
+        function pausarVideo() {
+            
+        }
+    </script>
+<!-- -------------------------------------------------------------------------- -->
+    <audio id="audio" src="audio/every-day-56152.mp3"></audio>
+    <script>
+        let audio = document.getElementById('audio');
+        audio.onloadedmetadata = function () {
+            console.log('metadata loaded!');
+            console.log(this.duration);
+            let p = document.createElement('p');
+            p.appendChild(document.createTextNode(`Duracion: ${audio.duration}`));
+            document.body.appendChild(p);
+        }
+        audio.volume = 0.4;
+        audio.controls = true;
+    </script>
+
 </body>
 </html>
