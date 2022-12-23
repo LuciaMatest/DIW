@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucia Mateos"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        button{
+            padding: 6px;
+            background-color: dimgrey;
+            border-radius: 20%;
+            border: white;
+        }
+        button:hover{
+            background-color: gray;
+        }
+
+        i{
+            padding: 5px;
+            color: white;
+            font-size:20px;
+        }
+    </style>
+    <title>Video</title>
+</head>
+<body><video id="videoGato" poster="indice.jpg" controls>
+        <source src="videos/gatoComprimido.mp4" type="video/mp4">
+    </video>
+    <br>
+    <div class="botones">
+        <button id="botonUndo" onclick="reiniciarVideo()"><i class="fa fa-undo"></i></button>
+        <button id="botonPlay" onclick="iniciarVideo()"><i class="fa fa-play"></i></button>
+        <button id="botonPause" onclick="pausarVideo()"><i class="fa fa-pause"></i></button>
+        <button id="botonStop" onclick="pararVideo()"><i class="fa fa-stop"></i></button>
+        <button id="botonVel1" onclick="velocidadVideo1()"><i class="fa fa-forward">1.5x</i></button>
+        <button id="botonVel2" onclick="velocidadVideo2()"><i class="fa fa-forward">2x</i></button>
+        <button id="botonSilenciar" onclick="silenciarVideo()"><i class="fa fa-volume-off"></i></button>
+        <button id="botonSonido" onclick="sonidoVideo()"><i class="fa fa-volume-up"></i></button>
+        <button id="botonResolucionSD" onclick="resolucionVideoSD()"><i class="fa fa-sliders"> SD</i></button>
+        <button id="botonResolucionHD" onclick="resolucionVideoHD()"><i class="fa fa-sliders"> HD</i></button>
+    </div>
+    <script src="funciones.js"></script>
+</body>
+</html>

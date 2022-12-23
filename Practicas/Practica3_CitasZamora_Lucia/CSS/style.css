@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header{
+    display: flex;
+    align-items: center;
+    top: 8px;
+    left: 8px;
+    height: 110px;
+    padding-right: 32px;
+    padding-left: 32px;
+    background-color: lightgray;
+}
+
+.logo{
+    width: 200px;
+    position: relative;
+}
+
+/* https://www.etq-amsterdam.com/ */
