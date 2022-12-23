@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,7 @@
             padding: 6px;
             background-color: dimgrey;
             border-radius: 20%;
+            border: white;
         }
         button:hover{
             background-color: gray;
@@ -22,7 +23,7 @@
             font-size:20px;
         }
     </style>
-    <title>Sombreado</title>
+    <title>Video</title>
 </head>
 <body>
     <!-- <h1 class="sombra">Texto con sombra</h1>
@@ -34,7 +35,7 @@
     </div> -->
 
     <video id="videoGato" poster="indice.jpg" controls>
-        <source src="videos/Untitled.mp4" type="video/mp4">
+        <source src="videos/gatoComprimido.mp4" type="video/mp4">
     </video>
     <br>
     <div class="botones">
@@ -44,15 +45,17 @@
         <button id="botonStop" onclick="pararVideo()"><i class="fa fa-stop"></i></button>
         <button id="botonVel1" onclick="velocidadVideo1()"><i class="fa fa-forward">1.5x</i></button>
         <button id="botonVel2" onclick="velocidadVideo2()"><i class="fa fa-forward">2x</i></button>
-        <button id="botonSilenciar" onclick="silenciarVideo()"><i class="fa fa-volume-down"></i></button>
+        <button id="botonSilenciar" onclick="silenciarVideo()"><i class="fa fa-volume-off"></i></button>
         <button id="botonSonido" onclick="sonidoVideo()"><i class="fa fa-volume-up"></i></button>
-        <button id="botonResolucion" onclick="resolucionVideo()"><i class="fa fa-image"></i></button>
+        <button id="botonResolucionSD" onclick="resolucionVideoSD()"><i class="fa fa-sliders"> SD</i></button>
+        <button id="botonResolucionHD" onclick="resolucionVideoHD()"><i class="fa fa-sliders"> HD</i></button>
     </div>
 
     <script>
+        //Reiniciar
         function reiniciarVideo() {
             let botonUndo = document.getElementById('botonUndo');
-            botonUndo.addEventListener('click', presionarUndo, false);
+            botonUndo.addEventListener('click', presionarUndo);
         }
 
         function presionarUndo() {
@@ -61,9 +64,10 @@
             video.play();
         }
 
+        //Play
         function iniciarVideo() {
             let botonPlay = document.getElementById('botonPlay');
-            botonPlay.addEventListener('click', presionarPlay, false);
+            botonPlay.addEventListener('click', presionarPlay);
         }
 
         function presionarPlay() {
@@ -71,9 +75,10 @@
             video.play();
         }
 
+        //Pausar
         function pausarVideo() {
             let botonPause = document.getElementById('botonPause');
-            botonPause.addEventListener('click', presionarPause, false);
+            botonPause.addEventListener('click', presionarPause);
         }
 
         function presionarPause() {
@@ -81,15 +86,86 @@
             video.pause();
         }
 
+        //Parar
         function pararVideo() {
             let botonStop = document.getElementById('botonStop');
-            botonStop.addEventListener('click', presionarStop, false);
+            botonStop.addEventListener('click', presionarStop);
         }
 
         function presionarStop() {
             let video = document.getElementById('videoGato');
             video.load();
             video.pause();
+        }
+
+        //Velocidad 1.5
+        function velocidadVideo1() {
+            let botonVel1= document.getElementById('botonVel1');
+            botonVel1.addEventListener('click', presionarVelocidad1);
+        }
+
+        function presionarVelocidad1() {
+            let video = document.getElementById('videoGato');
+            video.playbackRate = 1.5;
+            video.play();
+        }
+
+        //Velocidad 2
+        function velocidadVideo2() {
+            let botonVel2= document.getElementById('botonVel2');
+            botonVel2.addEventListener('click', presionarVelocidad2);
+        }
+
+        function presionarVelocidad2() {
+            let video = document.getElementById('videoGato');
+            video.playbackRate = 2;
+            video.play();
+        }
+
+        //Silenciar
+        function silenciarVideo() {
+            let botonSilenciar= document.getElementById('botonSilenciar');
+            botonSilenciar.addEventListener('click', presionarSilenciar);
+        }
+
+        function presionarSilenciar() {
+            let video = document.getElementById('videoGato');
+            video.muted = true;
+        }
+
+        //Sonido
+        function sonidoVideo() {
+            let botonSonido= document.getElementById('botonSonido');
+            botonSonido.addEventListener('click', presionarSonido);
+        }
+
+        function presionarSonido() {
+            let video = document.getElementById('videoGato');
+            video.muted = false;
+        }
+
+        //ResolucionSD
+        function resolucionVideoSD() {
+            let botonResolucionSD= document.getElementById('botonResolucionSD');
+            botonResolucionSD.addEventListener('click', presionarResoSD);
+        }
+
+        function presionarResoSD() {
+            let video = document.getElementById('videoGato');
+            video.src='./videos/gatoComprimido.mp4';
+            video.play();
+        }
+
+        //ResolucionHD
+        function resolucionVideoHD() {
+            let botonResolucionHD= document.getElementById('botonResolucionHD');
+            botonResolucionHD.addEventListener('click', presionarResoHD);
+        }
+
+        function presionarResoHD() {
+            let video = document.getElementById('videoGato');
+            video.src="./videos/gatoHD.mp4";
+            video.play();
         }
         
     </script>
