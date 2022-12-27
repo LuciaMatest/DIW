@@ -53,7 +53,7 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    padding: 90px;
 }
 
 main a div {
@@ -61,8 +61,8 @@ main a div {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    padding-inline-start: 50px;
-    padding-inline-end: 50px;
+    padding-inline-start: 90px;
+    padding-inline-end: 90px;
 }
 
 main div img {
