@@ -4,7 +4,7 @@
 
 body {
     background-color: rgb(240, 240, 240);
-    font-family: Graphik, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -12,39 +12,71 @@ body {
 /* Encabezado */
 header {
     display: flex;
+    min-height: 90px;
+    background-color: rgb(226, 226, 226);
+    justify-content: space-between;
     align-items: center;
-    top: 8px;
-    left: 8px;
-    height: 110px;
-    padding-right: 32px;
-    padding-left: 32px;
-    background-color: lightgray;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .icono_logo {
-    width: 200px;
-    position: relative;
+    height: 65px;
+}
+
+/* Barra de navegación */
+.navegador a {
+    padding-right: 10px;
+    font-weight: 200;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Cambia de color cuando el raton pasa por encima */
+.navegador :hover {
+    color: dimgray;
+}
+
+/* Principal */
+main {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
 }
 
-.navegador {
+main a div {
+    text-align: center;
+    justify-content: center;
+    padding-inline-start: 50px;
+    padding-inline-end: 50px;
+    align-items: flex-end;
+}
+
+main div img {
+    height: 350px;
+}
+
+main div .rectangulo {
+    width: 350px;
+    height: 80px;
+    flex: 1;
     display: flex;
+    align-items: center;
+    background: #008573;
+    background: linear-gradient(360deg, rgba(0, 133, 115, 1) 35%, rgba(254, 254, 254, 0) 84%);
 }
 
-.inicio{
-    padding-left: 20px;
+.rectangulo h2 {
+    color: white;
 }
 
-.icono_acceso {
-    width: 14px;
-    position: relative;
-}
-
-/* Listas sin bullets */
-ul {
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
+main a:hover {
+    opacity: 0.7;
 }
 
 /* Enlaces sin subrayado ni color azul */
@@ -53,5 +85,25 @@ a {
     color: black;
 }
 
-/* https://www.etq-amsterdam.com/ */
+/* Adaptación de tamaños */
+/* @media only screen and (max-width: 700px) {
+    header{
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 
+    .icono_logo{
+        height: 90px;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+
+    nav a {
+        padding: 5px;
+    }
+  } */
