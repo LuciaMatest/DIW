@@ -42,7 +42,7 @@ header {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Cambia de color cuando el raton pasa por encima */
+/* Cuando el raton pasa por encima */
 .navegador :hover {
     color: dimgray;
 }
@@ -53,74 +53,69 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 90px;
+    padding: 80px;
 }
 
 main a div {
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    display: inline-block;
     text-align: center;
-    justify-content: center;
     padding-inline-start: 90px;
     padding-inline-end: 90px;
 }
 
 main div img {
-    height: 350px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    height: 400px;
+    border-radius: 8px;
 }
 
 main div .rectangulo {
-    width: 350px;
-    height: 80px;
+    position: absolute;
+    top: 330px;
+    left: 90px;
+    width: 400px;
+    height: 70px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: #008573;
-    background: linear-gradient(360deg, rgba(0, 133, 115, 1) 35%, rgba(254, 254, 254, 0) 89%);
+    background: linear-gradient(360deg, rgba(0, 133, 115, 1) 60%, rgba(254, 254, 254, 0) 100%);
 }
 
 .rectangulo h2 {
     color: white;
+    margin-top: 25px;
 }
 
+main a {
+    transition: transform .5s;
+}
+
+/* Cuando el raton pasa por encima */
 main a:hover {
     opacity: 0.7;
+    transform: scale(1.2);
 }
 
 /* Pie de página */
 footer {
-    height: 40px;
-    position: fixed;
     display: flex;
     flex-direction: row;
-    left: 0;
+    position: fixed;
+    background: #dd524f;
+    color: white;
+    height: 45px;
     bottom: 0;
     width: 100%;
     text-align: center;
     justify-content: center;
-    background: #dd524f;
-}
-
-footer{
     padding-top: 13px;
     padding-bottom: 13px;
-    padding-left: 30px;
+    padding-left: 150px;
     padding-right: 30px;
-    color: white;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    justify-content: space-between;
 }
 
-footer .enlaces{
-    grid-area: 2 / 2 / 3 / 3;
-}
-
-footer .enlaces a{
+footer .enlaces a {
     color: white;
 }
 
@@ -133,25 +128,25 @@ footer .enlaces a {
     padding-right: 5px;
 }
 
+/* Cuando el raton pasa por encima */
 footer .enlaces :hover {
     color: rgb(100, 0, 0);
 }
 
-footer .redes{
-    grid-area: 2 / 3 / 3 / 4;
-}
-
-footer .redes i{
+footer .redes i {
     color: white;
     padding-left: 5px;
     padding-right: 5px;
 }
 
-footer .redes i:hover{
+/* Cuando el raton pasa por encima */
+footer .redes i:hover {
     color: rgb(100, 0, 0);
 }
 
 /* Adaptación de tamaños */
+
+
 /* @media only screen and (max-width: 700px) {
     header{
         flex-direction: column;
