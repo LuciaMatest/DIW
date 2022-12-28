@@ -113,6 +113,7 @@ footer {
     padding-left: 150px;
     padding-right: 30px;
     justify-content: space-between;
+    font-size: smaller;
 }
 
 footer .enlaces a {
