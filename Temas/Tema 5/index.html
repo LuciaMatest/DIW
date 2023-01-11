@@ -10,71 +10,50 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Document</title>
     <style>
-        div {
-            border: 1px solid gray;
+        .row > div {
+            background-color: #dadada;
+            padding: 30px;
+            border: 1px solid gainsboro;
             color: white;
             font-weight: bold;
-        }
-
-        .row.content {
-            height: 1500px
-        }
-
-        .sidenav {
-            background-color: #f1f1f1;
-            height: 100%;
-        }
-
-        @media screen and (max-width: 767px) {
-            .sidenav {
-                height: auto;
-                padding: 15px;
-            }
-
-            .row.content {
-                height: auto;
-            }
+            justify-content: center;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <!-- <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12" style="background-color:red;">Primero</div>
-            <div class="col-xs-12 col-sm-4" style="background-color:blue;">Segundo</div>
-            <div class="col-xs-12 col-sm-8" style="background-color:green;">Tercero</div>
-        </div>
-    </div> -->
-
-    <!-- <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:green;">Verde</div>
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="background-color:red;">Rojo</div>
-            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" style="background-color:deeppink;">Rosa</div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-8 col-md-4 col-lg-4" style="background-color:orange;">Naranja1</div>
-                <div class="col-xs-12 col-sm-8 col-md-4 col-lg-4" style="background-color:orange;">Naranja2</div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 col-sm-4 col-md-1 col-lg-1" style="background-color:blue;">Azul1</div>
-                <div class="col-xs-6 col-sm-4 col-md-1 col-lg-1" style="background-color:blue;">Azul2</div>
-                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="background-color:blue;">Azul3</div>
-                <div class="col-xs-6 col-sm-4 col-md-1 col-lg-1" style="background-color:blue;">Azul4</div>
-                <div class="col-xs-6 col-sm-4 col-md-1 col-lg-1" style="background-color:blue;">Azul5</div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:green;">Verde</div>
-        </div>
-    </div> -->
-
-
     <div class="container-fluid">
-        <div class="row content">
-            <div class="col-sm-3 sidenav" style="background-color:red;"></div>
-            <div class="col-sm-9" style="background-color:deeppink;"></div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-4" style="background-color:green;">Verde</div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 " style="background-color:red;" id="rojo">Rojo</div>
+                <div class="col-lg-8 col-md-8">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12" style="background-color:deeppink;">Rosa</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12" style="background-color:orange;">Naranja1</div>
+                        <div class="col-lg-6 col-md-12" style="background-color:orange;">Naranja2</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2 col-md-4" style="background-color:blue;">Azul1</div>
+                        <div class="col-lg-2 col-md-4" style="background-color:blue;">Azul2</div>
+                        <div class="col-lg-4 col-md-4" style="background-color:blue;">Azul3</div>
+                        <div class="col-lg-2 col-md-4" style="background-color:blue;">Azul4</div>
+                        <div class="col-lg-2 col-md-4" style="background-color:blue;">Azul5</div>
+
+                        <div class="col-lg-2 col-md-4" style="background-color:blue;">Azul1</div>
+                        <div class="col-lg-2 col-md-4" style="background-color:blue;">Azul2</div>
+                        <div class="col-lg-4 col-md-4" style="background-color:blue;">Azul3</div>
+                        <div class="col-lg-2 col-md-4" style="background-color:blue;">Azul4</div>
+                        <div class="col-lg-2 col-md-4" style="background-color:blue;">Azul5</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12" style="background-color:green;">Verde</div>
         </div>
     </div>
-
 </body>
 
 </html>
