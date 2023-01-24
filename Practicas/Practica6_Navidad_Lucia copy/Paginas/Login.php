@@ -22,21 +22,6 @@
                 <div class="me-auto mb-1 bd-highlight" class="logo">
                     <img src="../Imagen/logo.png" alt="logo" class="icono_logo" style="width: 200px;">
                 </div>
-
-                <div class="p-2">
-                    <?php
-                    // session_start();
-                    // if (estaValidado()) {
-                    //     echo '<a href="#" type="button" class="btn boton px-1"><i class="fa-solid fa-cart-arrow-down pe-2"></i>Carrito</a>';
-                    //     echo '<a href="#" type="button" class="btn boton px-1"><i class="fa-solid fa-pen-to-square pe-2"></i>Perfil</a>';
-                    //     echo '<a href="#" type="button" class="btn boton px-1"><i class="fa-solid fa-right-from-bracket pe-2"></i>Cerrar Sesión</a>';
-                    // } else {
-                    ?>
-                    <a href="#" type="button" class="boton px-1"><i class="fa-solid fa-user pe-2"></i>Iniciar Sesión</a>
-                    <?php
-                    // }
-                    ?>
-                </div>
             </div>
         </div>
     </header>
@@ -61,30 +46,32 @@
         </div>
     </nav>
 
-    <main>
+    <main class="pt-5">
         <div class="container">
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="card">
+                    <h1 class="text-center fw-bold pb-3" style="color: #444;">Mi cuenta</h1>
+                    <div class="card" style="background-color: #d4d4d4;">
                         <div class="card-title text-center">
-                            <h2 class="p-3">Acceder</h2>
+                            <h2 class="px-3 pt-4 fw-bold" style="color: #555;">Acceder</h2>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body pt-0">
                             <form>
                                 <div class="mb-4">
-                                    <label for="username" class="form-label">Username/Email</label>
+                                    <label for="username" class="form-label">Usuario</label>
                                     <input type="text" class="form-control" id="username" />
                                 </div>
                                 <div class="mb-4">
-                                    <label for="password" class="form-label">Password</label>
+                                    <label for="password" class="form-label">Contraseña</label>
                                     <input type="password" class="form-control" id="password" />
                                 </div>
                                 <!-- <div class="mb-4">
                                     <input type="checkbox" class="form-check-input" id="remember" />
                                     <label for="remember" class="form-label">Remember Me</label>
                                 </div> -->
-                                <div class="d-grid">
-                                    <button type="submit" class="btn text-light main-bg">Login</button>
+                                <div class="text-center">
+                                    <input type="submit" value="Acceder" name="enviar" class="botonG">
+                                    <a href="#" class="ps-3"> Crear cuenta</a>
                                 </div>
                             </form>
                         </div>

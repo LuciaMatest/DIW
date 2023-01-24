@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     background-color: #f0f0f0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -12,6 +16,16 @@ body {
 .boton {
     color: #be901b;
     text-decoration: none;
+}
+
+.botonG{
+    background-color: #be901b;
+    border: 1px solid #ccc;
+    padding: 5px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: large;
+    color: whitesmoke;
 }
 
 .op {
