@@ -20,7 +20,7 @@
         <div class="mx-2">
             <div class="d-flex bd-highlight mb-1 align-items-center justify-content-space-between">
                 <div class="me-auto mb-1 bd-highlight" class="logo">
-                    <img src="Imagen/logo.png" alt="logo" class="icono_logo" style="width: 200px;">
+                    <img src="./Imagen/style.css" alt="logo" class="icono_logo" style="width: 200px;">
                 </div>
 
                 <div class="p-2">
@@ -61,25 +61,44 @@
         </div>
     </nav>
 
-    <main class="form-signin w-50 m-auto">
-    <h1 class="text-center">Mi cuenta</h1>
-    <div class="login-page">
-  <div class="form">
-    <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
-    </form>
-    <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-      <button>login</button>
-      <p class="message">Not registered? <a href="#">Create an account</a></p>
-    </form>
-  </div>
-</div>
+    <main>
+        <div class="login_form_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <!-- login_wrapper -->
+                        <div class="login_wrapper">
+                            <div class="formsix-pos">
+                                <div class="form-group i-email">
+                                    <input type="email" class="form-control" required="" id="email2" placeholder="Email Address *">
+                                </div>
+                            </div>
+                            <div class="formsix-e">
+                                <div class="form-group i-password">
+                                    <input type="password" class="form-control" required="" id="password2" placeholder="Password *">
+                                </div>
+                            </div>
+                            <div class="login_remember_box">
+                                <label class="control control--checkbox">Remember me
+                                    <input type="checkbox">
+                                    <span class="control__indicator"></span>
+                                </label>
+                                <a href="#" class="forget_password">
+                                    Forgot Password
+                                </a>
+                            </div>
+                            <div class="login_btn_wrapper">
+                                <a href="#" class="btn btn-primary login_btn"> Login </a>
+                            </div>
+                            <div class="login_message">
+                                <p>Don&rsquo;t have an account ? <a href="#"> Sign up </a> </p>
+                            </div>
+                        </div>
+                        <!-- /.login_wrapper-->
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <div class="container">
