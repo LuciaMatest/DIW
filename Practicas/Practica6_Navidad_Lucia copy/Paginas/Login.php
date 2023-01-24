@@ -49,19 +49,19 @@
     <main class="pt-5">
         <div class="container">
             <div class="row justify-content-center mt-5">
-                <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="col-lg-5 col-md-9 col-sm-10">
                     <h1 class="text-center fw-bold pb-3" style="color: #444;">Mi cuenta</h1>
-                    <div class="card" style="background-color: #d4d4d4;">
+                    <div class="card" style="background-color: #d4d4d4;border-style: none;">
                         <div class="card-title text-center">
                             <h2 class="px-3 pt-4 fw-bold" style="color: #555;">Acceder</h2>
                         </div>
                         <div class="card-body pt-0">
                             <form>
-                                <div class="mb-4">
+                                <div class="mb-4 px-2">
                                     <label for="username" class="form-label">Usuario</label>
                                     <input type="text" class="form-control" id="username" />
                                 </div>
-                                <div class="mb-4">
+                                <div class="mb-4 px-2">
                                     <label for="password" class="form-label">Contraseña</label>
                                     <input type="password" class="form-control" id="password" />
                                 </div>
