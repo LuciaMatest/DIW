@@ -1,6 +1,7 @@
 <?php
 // require('../Funciones/funcionesBD.php');
 // require('../Conexion/conexionBD.php');
+// session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -46,7 +47,7 @@
         <div class="container-fluid px-0">
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mx-1">
-                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Inicio</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="./index.php">Inicio</a></li>
                     <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Tienda</a></li>
                     <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Contacto</a></li>
                     <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Ofertas</a></li>
@@ -62,35 +63,24 @@
         </div>
     </nav>
 
-    <main class="pt-5">
+    <main class="py-5 bg-white">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-                    </svg>
-                    <h2 class="fw-normal">Heading</h2>
-                    <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-                    </svg>
-                    <h2 class="fw-normal">Heading</h2>
-                    <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-                    </svg>
-                    <h2 class="fw-normal">Heading</h2>
-                    <p>And lastly this, the third column of representative placeholder content.</p>
-                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                <?
+                // foreach ($array_productos as $key) {
+                //     echo '<div class="col-lg-4" style="text-align: center;align-items: center;justify-content: center;">';
+                //     echo '<img src="../' . $key['imagen_baja'] . '" alt="productos_pelu">';
+                //     echo '<h3>' . $key['nombre'] . '</h3>';
+                //     echo '<p class="precio"><b>' . $key['precio'] . '€</b></p>';
+                //     echo '<a href="producto.php?cod_producto=' . $key['cod_producto'] . '" class="boton">Comprar <i class="fa-solid fa-cart-plus"></i></a>';
+                //     echo '</div>';
+                // }
+                ?>
+                <div class="col-lg-4" style="text-align: center;align-items: center;justify-content: center;">
+                    <img src="../Imagen/baja/1-baja.png" alt="productos_pelu">
+                    <h3 class="fw-normal">Heading</h3>
+                    <p>12€</p>
+                    <a href="" class="botonG" href="#">Comprar <i class="fa-solid fa-cart-plus"></i></a>
                 </div>
             </div>
         </div>

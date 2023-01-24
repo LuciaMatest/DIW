@@ -18,15 +18,21 @@ body {
     text-decoration: none;
 }
 
-.botonG{
+.botonG {
     background-color: #be901b;
     border: 1px solid #ccc;
-    padding: 5px;
+    padding: 10px;
     padding-right: 50px;
     padding-left: 50px;
     font-size: large;
     color: whitesmoke;
 }
+
+.botonG:hover {
+    color: #555;
+    background-color: #d1d1d1;
+}
+
 
 .op {
     color: #333;
