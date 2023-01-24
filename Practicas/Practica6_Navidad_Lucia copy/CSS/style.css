@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.boton{
+    color: #be901b;
+    text-decoration: none;
+}
+
+.op{
+    color: #333;
+    font-size: large;
+}
+
+.opli:hover {
+    background: whitesmoke;
+    color: #333;
+}
+
+.rectangulo {
+    background: linear-gradient(90deg, #ffffff00 0%, #be901b 18%, #c69d36 80%, #e0ca9200 100%);
+}
+
+.rectangulo h4 {
+    color: whitesmoke;
+}
