@@ -1,5 +1,6 @@
 <?php
-// session_start();
+// require('../Funciones/funcionesBD.php');
+// require('../Conexion/conexionBD.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
