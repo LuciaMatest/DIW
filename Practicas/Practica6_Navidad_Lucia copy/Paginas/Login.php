@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mx-1">
                     <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Inicio</a></li>
-                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Tienda</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="Tienda.php">Tienda</a></li>
                     <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Contacto</a></li>
                     <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Ofertas</a></li>
                     <?php

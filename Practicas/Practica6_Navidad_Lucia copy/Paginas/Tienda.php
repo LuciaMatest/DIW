@@ -1,6 +1,5 @@
 <?php
-    // require('Funciones/funcionesBD.php');
-    // require('Conexion/conexionBD.php');
+// session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -12,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>Tienda - Bootstrap</title>
 </head>
 
@@ -21,7 +20,7 @@
         <div class="mx-2">
             <div class="d-flex bd-highlight mb-1 align-items-center justify-content-space-between">
                 <div class="me-auto mb-1 bd-highlight" class="logo">
-                    <img src="Imagen/logo.png" alt="logo" class="icono_logo" style="width: 200px;">
+                    <img src="../Imagen/logo.png" alt="logo" class="icono_logo" style="width: 200px;">
                 </div>
 
                 <div class="p-2">
@@ -33,7 +32,7 @@
                     //     echo '<a href="#" type="button" class="btn boton px-1"><i class="fa-solid fa-right-from-bracket pe-2"></i>Cerrar Sesión</a>';
                     // } else {
                     ?>
-                    <a href="./Paginas/Login.php" type="button" class="boton px-1"><i class="fa-solid fa-user pe-2"></i>Iniciar Sesión</a>
+                    <a href="Login.php" type="button" class="boton px-1"><i class="fa-solid fa-user pe-2"></i>Iniciar Sesión</a>
                     <?php
                     // }
                     ?>
@@ -47,7 +46,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mx-1">
                     <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Inicio</a></li>
-                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="Paginas/Tienda.php">Tienda</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Tienda</a></li>
                     <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Contacto</a></li>
                     <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Ofertas</a></li>
                     <?php
@@ -63,12 +62,35 @@
     </nav>
 
     <main class="pt-5">
-        <div class="align-items-center justify-content-center">
-            <div class="rectangulo py-4">
-                <h4 class="text-center fw-bold m-0">Tu Tienda de Productos de Belleza y Bienestar</h4>
-            </div>
-            <div class="p-3">
-                <img class="img-fluid" src="Imagen/inicio4.jpg" alt="img">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+                    </svg>
+                    <h2 class="fw-normal">Heading</h2>
+                    <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+                    </svg>
+                    <h2 class="fw-normal">Heading</h2>
+                    <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+                    </svg>
+                    <h2 class="fw-normal">Heading</h2>
+                    <p>And lastly this, the third column of representative placeholder content.</p>
+                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                </div>
             </div>
         </div>
     </main>
@@ -81,6 +103,12 @@
             </ul>
         </footer>
     </div>
+    <?php
+    // if (isset($_SESSION['error'])) {
+    //     echo $_SESSION['error'];
+    // }
+    // unset($_SESSION['error']);
+    ?>
 </body>
 
 </html>
