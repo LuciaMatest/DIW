@@ -1,4 +1,15 @@
-.navOp{
-    margin-left: 10px;
-    margin-right: 10px;
+.navOp {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #444;
+}
+
+svg,
+.navOp:hover,
+a:hover {
+    color: #e33c13;
 }
