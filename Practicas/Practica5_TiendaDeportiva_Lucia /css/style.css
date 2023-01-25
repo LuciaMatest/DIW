@@ -8,6 +8,10 @@ a {
     color: #444;
 }
 
+ul{
+    list-style: none;
+}
+
 svg,
 .navOp:hover,
 a:hover {
