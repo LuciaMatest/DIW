@@ -109,59 +109,107 @@
         </div>
 
         <!-- Carousel Multiple Items -->
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="images/sports/furbo.webp" class="border border-dark img-fluid w-100" alt="..." />
-                            <h4 class="display-5"> Fútbol </h4>
-                        </div>
-                        <div class="col-4">
-                            <img src="images/sports/baloncesto.webp" class="border border-dark img-fluid w-100"
-                                alt="..." />
-                            <h4 class="display-5"> Baloncesto </h4>
-                        </div>
-                        <div class="col-4">
-                            <img src="images/sports/danza.webp" class="border border-dark img-fluid w-100" alt="..." />
-                            <h4 class="display-5"> Danza </h4>
-                        </div>
+        <section class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <h3 class="mb-3">Filtrar por deporte</h3>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="images/sports/furbo.webp" class="border border-dark img-fluid w-100" alt="..." />
-                            <h4 class="display-5"> Fútbol </h4>
-                        </div>
-                        <div class="col-4">
-                            <img src="images/sports/baloncesto.webp" class="border border-dark img-fluid w-100"
-                                alt="..." />
-                            <h4 class="display-5"> Baloncesto </h4>
-                        </div>
-                        <div class="col-4">
-                            <img src="images/sports/danza.webp" class="border border-dark img-fluid w-100" alt="..." />
-                            <h4 class="display-5"> Danza </h4>
-                        </div>
+                    <div class="col-6 text-right d-flex justify-content-end">
+                        <a class="me-1" href="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                            </svg>
+                        </a>
+                        <a href="#carouselExampleIndicators2" role="button" data-bs-slide="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                            </svg>
+                        </a>
                     </div>
-                </div>
-                
+                    <div class="col-12">
+                        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+
+                                        <a href="#" class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <img class="img-fluid" alt="100%x280" src="img/sp1.jpg">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Fútbol</h4>
+                                                </div>
+
+                                            </div>
+                                        </a>
+                                        </a>
+                                        <a href="#" class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <img class="img-fluid" alt="100%x280" src="img/sp2.jpg">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Baloncesto</h4>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <img class="img-fluid" alt="100%x280" src="img/sp3.jpg">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Tenis</h4>
+
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3 ">
+                                            <div class="card">
+                                                <img class="img-fluid" alt="100%x280" src="img/sp4.jpg">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Yoga</h4>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <img class="img-fluid" alt="100%x280" src="img/sp5.jpg">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Running</h4>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <img class="img-fluid" alt="100%x280" src="img/sp6.jpg">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Sketeboard</h4>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-            <!-- Cards -->
-            <!-- <div class="album py-5 bg-light">
+        <!-- Cards -->
+        <!-- <div class="album py-5 bg-light">
                 <div class="container">
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                         <div class="col">
@@ -382,11 +430,6 @@
     <footer class="text-center text-lg-start bg-light text-muted">
         <!-- Section: Social media -->
         <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-            <!-- Left -->
-            <div class="me-5 d-none d-lg-block">
-                <span>Get connected with us on social networks:</span>
-            </div>
-            <!-- Left -->
 
             <!-- Right -->
             <div>
@@ -494,13 +537,12 @@
 
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2021 Copyright:
+            © 2023 Copyright:
             <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
         </div>
         <!-- Copyright -->
     </footer>
-    <!-- Footer -->
+    <script src="js/query.js"></script>
 </body>
-
 
 </html>
