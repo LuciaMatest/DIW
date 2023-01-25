@@ -12,6 +12,14 @@ ul{
     list-style: none;
 }
 
+.listado li a{
+    color: white;
+}
+
+.listado li a:hover{
+    color: #e33c13;
+}
+
 svg,
 .navOp:hover,
 a:hover {
