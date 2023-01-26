@@ -21,11 +21,11 @@
     <header class="p-3" style="background-color: #f0f0f0;">
         <div class="mx-2">
             <div class="d-flex bd-highlight mb-1 align-items-center justify-content-space-between">
-                <div class="me-auto mb-1 bd-highlight" class="logo">
+                <a href="index.php" class="mx-auto mx-sm-auto ms-md-0 my-1" class="logo">
                     <img src="../Imagen/logo.png" alt="logo" class="icono_logo" style="width: 200px;">
-                </div>
+                </a>
 
-                <div class="p-2">
+                <div class="p-2 p-sm-0">
                     <?php
                     // session_start();
                     // if (estaValidado()) {
@@ -46,24 +46,6 @@
                     //         <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
                     //     </svg>
                     //     Cerrar Sesión</a>';
-                    //
-                    //     echo '<a href="#" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">
-                    //     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                    //         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                    //     </svg>
-                    //     </a>';
-                    //     echo '<a href="#" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">
-                    //     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                    //         <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                    //         <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                    //     </svg>
-                    //     </a>';
-                    //     echo '<a href="#" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">
-                    //     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                    //         <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
-                    //         <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                    //     </svg>
-                    //     </a>';
                     // } else {
                     ?>
                     <a href="./Paginas/Login.php" type="button" class="boton px-1 d-none d-sm-none d-md-block">
@@ -71,11 +53,6 @@
                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                         </svg>
                         Iniciar Sesión
-                    </a>
-                    <a href="./Paginas/Login.php" type="button" class="boton px-1 d-block d-sm-block d-md-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                        </svg>
                     </a>
                     <?php
                     // }
@@ -88,13 +65,25 @@
     <nav class="navbar navbar-expand-lg" style="background-color: #d4d4d4;">
         <div class="container-fluid">
             <a class="navbar-brand"></a>
-            <button class="btn default d-block d-sm-block d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="btn default d-block d-sm-block d-md-flex d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                 </svg>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
+                    <?php
+                    // session_start();
+                    // if (estaValidado()) {
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Carrito</a></li>';
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Perfil</a></li>';
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Cerrar Sesión</a></li>';
+                    // } else {
+                    ?>
+                    <li class="opli nav-item  fw-bold"><a href="./Paginas/Login.php" type="button" class="boton px-1 d-block d-sm-block d-md-none">Iniciar Sesión</a></li>
+                    <?php
+                    // }
+                    ?>
                     <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="../index.php">Inicio</a></li>
                     <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Tienda</a></li>
                     <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Contacto</a></li>
