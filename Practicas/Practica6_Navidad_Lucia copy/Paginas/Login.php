@@ -36,15 +36,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
-                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="../index.php">Inicio</a></li>
-                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="Tienda.php">Tienda</a></li>
-                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Contacto</a></li>
-                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Ofertas</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="../index.php">Inicio</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="Tienda.php">Tienda</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Contacto</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Ofertas</a></li>
                     <?php
                     // if (esAdmin() || esModerador()) {
-                    //     echo '<li class="nav-item p-2 fw-bold"><a class="nav-link" href="#">Almacén</a></li>';
-                    //     echo '<li class="nav-item p-2 fw-bold"><a class="nav-link" href="#">Albarán</a></li>';
-                    //     echo '<li class="nav-item p-2 fw-bold"><a class="nav-link" href="#">Ventas</a></li>';
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Almacén</a></li>';
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Albarán</a></li>';
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Ventas</a></li>';
                     // }
                     ?>
                 </ul>
