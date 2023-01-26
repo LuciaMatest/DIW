@@ -26,3 +26,15 @@ svg,
 a:hover {
     color: #e33c13;
 }
+
+.botones{
+    background-color: #e33c13;
+    color: white;
+    border: none;
+} 
+
+.botones:hover{
+    color: #e33c13;
+    background-color: white;
+    border: none;
+} 
