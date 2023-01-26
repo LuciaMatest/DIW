@@ -75,32 +75,103 @@
     </nav>
 
     <main class="pt-1">
+        <?php
+        // if (guardarCambios()){
+        //     actualizarUsuario();
+        //     session_destroy();
+        //     validarUser($_REQUEST['user'],$_REQUEST['contraseña']);
+        //     echo "<h2>Perfil actualizado!</h2>";
+        //     echo "<a href='../index.php' class='botones'>Volver a inicio</a>";
+        // } else{
+        ?>
         <div class="container">
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-5 col-md-9 col-sm-10">
                     <h1 class="text-center fw-bold pb-3" style="color: #444;">Mi perfil</h1>
                     <div class="card" style="background-color: #d4d4d4;border-style: none;">
                         <div class="card-body pt-4">
-                            <form>
+                            <form action="./Perfil.php" method="post">
                                 <div class="mb-4 px-2">
                                     <label for="idUser" class="form-label">Usuario:</label>
-                                    <input type="text" class="form-control" name="user" id="user" readonly>
+                                    <input type="text" class="form-control" name="user" id="user" readonly value="<?php echo $_SESSION["user"];?>">
+                                    <?
+                                    //comprobar que no este vacio y que cumple los requisitos, si lo está pongo un error
+                                    // if (enviado()) {
+                                    //     if (vacio("user")) {
+                                    ?>
+                                    <!-- <span style="color:brown"> Introduce usuario</span> -->
+                                    <?
+                                    //     }
+                                    // }
+                                    ?>
                                 </div>
                                 <div class="mb-4 px-2">
                                     <label for="idNombre" class="form-label">Nombre:</label>
-                                    <input type="text" class="form-control" name="nombre" id="idNombre">
+                                    <input type="text" class="form-control" name="nombre" id="idNombre" value="<?php echo $_SESSION["nombre"];?>">
+                                    <?
+                                    //comprobar que no este vacio y que cumple los requisitos, si lo está pongo un error
+                                    // if (enviado()) {
+                                    //     if (vacio("nombre")) {
+                                    ?>
+                                    <!-- <span style="color:brown"> Introduce nombre</span> -->
+                                    <?
+                                    //     }
+                                    // }
+                                    ?>
                                 </div>
                                 <div class="mb-4 px-2">
                                     <label for="idContraseña" class="form-label">Contraseña:</label>
-                                    <input type="password" class="form-control" name="contraseña" id="contraseña">
+                                    <input type="password" class="form-control" name="contraseña" id="contraseña" value="<?php echo $_SESSION["contraseña"];?>">
+                                    <?
+                                    //comprobar que no este vacio y valido, si lo está pongo un error
+                                    // if (enviado()) {
+                                    //     if (vacio("contraseña")) {
+                                    ?>
+                                    <!-- <span style="color:brown"> Introduce contraseña</span> -->
+                                    <?
+                                    // } elseif (!patronContraseña()) {
+                                    ?>
+                                    <!-- <span style="color:brown"> Contraseña no válida, revise</span> -->
+                                    <?
+                                    //     }
+                                    // }
+                                    ?>
                                 </div>
                                 <div class="mb-4 px-2">
                                     <label for="idEmail" class="form-label">Email:</label>
-                                    <input type="email" class="form-control" name="email" id="idEmail">
+                                    <input type="email" class="form-control" name="email" id="idEmail" value="<?php echo $_SESSION["email"];?>">
+                                    <?
+                                    //comprobar que no este vacio y valido, si lo está pongo un error
+                                    // if (enviado()) {
+                                    //     if (vacio("email")) {
+                                    ?>
+                                    <!-- <span style="color:brown"> Introduce email</span> -->
+                                    <?
+                                    // } elseif (!patronEmail()) {
+                                    ?>
+                                    <!-- <span style="color:brown"> Email no válida, revise</span> -->
+                                    <?
+                                    //     }
+                                    // }
+                                    ?>
                                 </div>
                                 <div class="mb-4 px-2">
                                     <label for="idFecha" class="form-label">Fecha de nacimiento:</label>
-                                    <input type="text" class="form-control" name="fecha" id="fecha" placeholder="dd/mm/aaaa">
+                                    <input type="text" class="form-control" name="fecha" id="fecha" placeholder="dd/mm/aaaa" value="<?php echo $_SESSION["fecha"];?>">
+                                    <?
+                                    //comprobar que no este vacio, que sea fecha correcta y si lo está pongo un error
+                                    // if (enviado()) {
+                                    //     if (vacio("fecha")) {
+                                    ?>
+                                    <!-- <span style="color:brown"> Introduce fecha</span> -->
+                                    <?
+                                    // } elseif (!patronFecha()) {
+                                    ?>
+                                    <!-- <span style="color:brown"> Fecha no válida, revise</span> -->
+                                    <?
+                                    //     }
+                                    // }
+                                    ?>
                                 </div>
                                 <div class="mb-4 px-2">
                                     <label for="idOpcion">Rol:</label>
@@ -110,6 +181,14 @@
                                         <option value="M0001">Moderador</option>
                                         <option value="U0001">Usuario normal</option>
                                     </select>
+                                    <?php
+                                    //Comprobar si existe
+                                    // if (existe('rol') && $_REQUEST['rol'] == 0) {
+                                    ?>
+                                    <!-- <span style="color:brown"> Introduce un rol</span> -->
+                                    <?
+                                    // }
+                                    ?>
                                 </div>
                                 <div class="text-center">
                                     <input type="submit" value="Guardar cambios" name="enviar" class="botonG">
@@ -121,6 +200,9 @@
                 </div>
             </div>
         </div>
+        <?php
+        // }
+        ?>
     </main>
 
     <div class="container-fluid px-0">
