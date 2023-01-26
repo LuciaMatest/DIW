@@ -77,7 +77,7 @@
                                 </div> -->
                                 <div class="text-center">
                                     <input type="submit" value="Acceder" name="enviar" class="botonG">
-                                    <a href="#" class="ps-3"> Crear cuenta</a>
+                                    <a href="Perfil.php" class="ps-3"> Crear cuenta</a>
                                 </div>
                             </form>
                         </div>

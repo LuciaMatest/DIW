@@ -52,29 +52,46 @@
         </div>
     </nav>
 
-    <main class="pt-5">
+    <main class="pt-1">
         <div class="container">
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-5 col-md-9 col-sm-10">
-                    <h1 class="text-center fw-bold pb-3" style="color: #444;">Mi cuenta</h1>
+                    <h1 class="text-center fw-bold pb-3" style="color: #444;">Mi perfil</h1>
                     <div class="card" style="background-color: #d4d4d4;border-style: none;">
-                        <div class="card-body pt-0">
+                        <div class="card-body pt-4">
                             <form>
                                 <div class="mb-4 px-2">
-                                    <label for="username" class="form-label">Usuario</label>
-                                    <input type="text" class="form-control" id="username" />
+                                    <label for="idUser" class="form-label">Usuario:</label>
+                                    <input type="text" class="form-control" name="user" id="user" readonly>
                                 </div>
                                 <div class="mb-4 px-2">
-                                    <label for="password" class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control" id="password" />
+                                    <label for="idNombre" class="form-label">Nombre:</label>
+                                    <input type="text" class="form-control" name="nombre" id="idNombre">
                                 </div>
-                                <!-- <div class="mb-4">
-                                    <input type="checkbox" class="form-check-input" id="remember" />
-                                    <label for="remember" class="form-label">Remember Me</label>
-                                </div> -->
+                                <div class="mb-4 px-2">
+                                    <label for="idContraseña" class="form-label">Contraseña:</label>
+                                    <input type="password" class="form-control" name="contraseña" id="contraseña">
+                                </div>
+                                <div class="mb-4 px-2">
+                                    <label for="idEmail" class="form-label">Email:</label>
+                                    <input type="email" class="form-control" name="email" id="idEmail">
+                                </div>
+                                <div class="mb-4 px-2">
+                                    <label for="idFecha" class="form-label">Fecha de nacimiento:</label>
+                                    <input type="text" class="form-control" name="fecha" id="fecha" placeholder="dd/mm/aaaa">
+                                </div>
+                                <div class="mb-4 px-2">
+                                    <label for="idOpcion">Rol:</label>
+                                    <select name="rol" id="idOpcion" class="w-100 d-inline-block bg-white" style="box-sizing: border-box;border-radius: 4px;border: 1px solid #ccc;padding: 12px 20px;margin: 8px 0;">
+                                        <option value="0">Seleccione una opción</option>
+                                        <option value="ADM01">Administrador</option>
+                                        <option value="M0001">Moderador</option>
+                                        <option value="U0001">Usuario normal</option>
+                                    </select>
+                                </div>
                                 <div class="text-center">
-                                    <input type="submit" value="Acceder" name="enviar" class="botonG">
-                                    <a href="#" class="ps-3"> Crear cuenta</a>
+                                    <input type="submit" value="Guardar cambios" name="enviar" class="botonG">
+                                    <a href="Login.php" class="ps-3"> Volver</a>
                                 </div>
                             </form>
                         </div>
@@ -84,8 +101,8 @@
         </div>
     </main>
 
-    <div class="container">
-        <footer class="fixed-bottom" style="background-color: #d4d4d4;">
+    <div class="container-fluid px-0">
+        <footer class="position-relative mt-3" style="background-color: #d4d4d4;">
             <ul class="nav justify-content-center ">
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Politica de Cookies</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Politica de Privacidad</a></li>
