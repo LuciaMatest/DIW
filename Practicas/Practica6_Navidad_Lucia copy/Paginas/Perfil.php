@@ -1,4 +1,7 @@
 <?php
+// require('../Funciones/funcionesBD.php');
+// require('../Funciones/BD.php');
+// require('../Conexion/conexionBD.php');
 // session_start();
 ?>
 <!DOCTYPE html>
@@ -22,6 +25,23 @@
                 <a href="../index.php" class="mx-auto mx-sm-auto ms-md-0 my-1" class="logo">
                     <img src="../Imagen/logo.png" alt="logo" class="icono_logo" style="width: 200px;">
                 </a>
+                <div class="p-2 p-sm-0">
+                    <a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg>
+                        Carrito
+                    </a>
+                </div>
+                <div class="p-2 p-sm-0">
+                    <a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                        </svg>
+                        Cerrar Sesión
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -36,15 +56,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
-                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="../index.php">Inicio</a></li>
-                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="Tienda.php">Tienda</a></li>
-                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Contacto</a></li>
-                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Ofertas</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a href="#" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Carrito</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a href="#" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Cerrar Sesión</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="../index.php">Inicio</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="Tienda.php">Tienda</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Contacto</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Ofertas</a></li>
                     <?php
                     // if (esAdmin() || esModerador()) {
-                    //     echo '<li class="nav-item p-2 fw-bold"><a class="nav-link" href="#">Almacén</a></li>';
-                    //     echo '<li class="nav-item p-2 fw-bold"><a class="nav-link" href="#">Albarán</a></li>';
-                    //     echo '<li class="nav-item p-2 fw-bold"><a class="nav-link" href="#">Ventas</a></li>';
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Almacén</a></li>';
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Albarán</a></li>';
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Ventas</a></li>';
                     // }
                     ?>
                 </ul>

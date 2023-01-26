@@ -80,19 +80,19 @@
                     //     echo '<li class="opli nav-item p-2 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Cerrar Sesión</a></li>';
                     // } else {
                     ?>
-                    <li class="opli nav-item  fw-bold"><a href="Login.php" type="button" class="boton px-1 d-block d-sm-block d-md-none">Iniciar Sesión</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a href="Login.php" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Iniciar sesión</a></li>
                     <?php
                     // }
                     ?>
-                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="../index.php">Inicio</a></li>
-                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Tienda</a></li>
-                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Contacto</a></li>
-                    <li class="opli nav-item p-2 fw-bold"><a class="op nav-link" href="#">Ofertas</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="../index.php">Inicio</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Tienda</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Contacto</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Ofertas</a></li>
                     <?php
                     // if (esAdmin() || esModerador()) {
-                    //     echo '<li class="nav-item p-2 fw-bold"><a class="nav-link" href="#">Almacén</a></li>';
-                    //     echo '<li class="nav-item p-2 fw-bold"><a class="nav-link" href="#">Albarán</a></li>';
-                    //     echo '<li class="nav-item p-2 fw-bold"><a class="nav-link" href="#">Ventas</a></li>';
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Almacén</a></li>';
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Albarán</a></li>';
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Ventas</a></li>';
                     // }
                     ?>
                 </ul>
