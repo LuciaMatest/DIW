@@ -21,7 +21,7 @@
     <header class="p-3" style="background-color: #f0f0f0;">
         <div class="mx-2">
             <div class="d-flex bd-highlight mb-1 align-items-center justify-content-space-between">
-                <a href="index.php" class="mx-auto mx-sm-auto ms-md-0 my-1" class="logo">
+                <a href="../index.php" class="mx-auto mx-sm-auto ms-md-0 my-1" class="logo">
                     <img src="../Imagen/logo.png" alt="logo" class="icono_logo" style="width: 200px;">
                 </a>
 
@@ -80,7 +80,7 @@
                     //     echo '<li class="opli nav-item p-2 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Cerrar Sesión</a></li>';
                     // } else {
                     ?>
-                    <li class="opli nav-item  fw-bold"><a href="./Paginas/Login.php" type="button" class="boton px-1 d-block d-sm-block d-md-none">Iniciar Sesión</a></li>
+                    <li class="opli nav-item  fw-bold"><a href="Login.php" type="button" class="boton px-1 d-block d-sm-block d-md-none">Iniciar Sesión</a></li>
                     <?php
                     // }
                     ?>
