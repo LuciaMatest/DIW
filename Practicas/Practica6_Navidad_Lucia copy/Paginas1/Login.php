@@ -37,7 +37,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
                     <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="../index.php">Inicio</a></li>
-                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="Tienda.php">Tienda</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="../Paginas2/Tienda.php">Tienda</a></li>
                     <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Contacto</a></li>
                     <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Ofertas</a></li>
                 </ul>
