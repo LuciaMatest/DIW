@@ -80,16 +80,16 @@
                     // session_start();
                     // if (estaValidado()) {
                     //     echo '<li class="opli nav-item p-2 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Carrito</a></li>';
-                    //     echo '<li class="opli nav-item p-2 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Perfil</a></li>';
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a href="./Paginas2/Perfil.php" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Perfil</a></li>';
                     //     echo '<li class="opli nav-item p-2 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Cerrar Sesión</a></li>';
                     // } else {
                     ?>
-                    <li class="opli nav-item fw-bold"><a href="./Paginas/Login.php" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Iniciar Sesión</a></li>
+                    <li class="opli nav-item fw-bold"><a href="./Paginas1/Login.php" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Iniciar Sesión</a></li>
                     <?php
                     // }
                     ?>
                     <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Inicio</a></li>
-                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="./Paginas/Tienda.php">Tienda</a></li>
+                    <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="./Paginas2/Tienda.php">Tienda</a></li>
                     <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Contacto</a></li>
                     <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Ofertas</a></li>
                     <?php
