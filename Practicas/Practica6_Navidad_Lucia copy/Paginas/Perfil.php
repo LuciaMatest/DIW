@@ -49,15 +49,26 @@
     <nav class="navbar navbar-expand-lg" style="background-color: #d4d4d4;">
         <div class="container-fluid">
             <a class="navbar-brand"></a>
-            <button class="btn default d-block d-sm-block d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="btn default d-block d-sm-block d-md-flex d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                 </svg>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
-                    <li class="opli nav-item p-2 fw-bold"><a href="#" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Carrito</a></li>
-                    <li class="opli nav-item p-2 fw-bold"><a href="#" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Cerrar Sesión</a></li>
+                    <?php
+                    // session_start();
+                    // if (estaValidado()) {
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Carrito</a></li>';
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Perfil</a></li>';
+                    //     echo '<li class="opli nav-item p-2 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Cerrar Sesión</a></li>';
+                    // } else {
+                    ?>
+                    <li class="opli nav-item p-2 p-sm-0 fw-bold"><a href="#" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Carrito</a></li>
+                    <li class="opli nav-item p-2 p-sm-0 fw-bold"><a href="#" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Cerrar Sesión</a></li>
+                    <?php
+                    // }
+                    ?>
                     <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="../index.php">Inicio</a></li>
                     <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="Tienda.php">Tienda</a></li>
                     <li class="opli nav-item p-2 fw-bold"><a class="op btn nav-link" href="#">Contacto</a></li>
@@ -93,7 +104,7 @@
                             <form action="./Perfil.php" method="post">
                                 <div class="mb-4 px-2">
                                     <label for="idUser" class="form-label">Usuario:</label>
-                                    <input type="text" class="form-control" name="user" id="user" readonly value="<?php echo $_SESSION["user"];?>">
+                                    <input type="text" class="form-control" name="user" id="user" readonly value="<?php echo $_SESSION["user"]; ?>">
                                     <?
                                     //comprobar que no este vacio y que cumple los requisitos, si lo está pongo un error
                                     // if (enviado()) {
@@ -107,7 +118,7 @@
                                 </div>
                                 <div class="mb-4 px-2">
                                     <label for="idNombre" class="form-label">Nombre:</label>
-                                    <input type="text" class="form-control" name="nombre" id="idNombre" value="<?php echo $_SESSION["nombre"];?>">
+                                    <input type="text" class="form-control" name="nombre" id="idNombre" value="<?php echo $_SESSION["nombre"]; ?>">
                                     <?
                                     //comprobar que no este vacio y que cumple los requisitos, si lo está pongo un error
                                     // if (enviado()) {
@@ -121,7 +132,7 @@
                                 </div>
                                 <div class="mb-4 px-2">
                                     <label for="idContraseña" class="form-label">Contraseña:</label>
-                                    <input type="password" class="form-control" name="contraseña" id="contraseña" value="<?php echo $_SESSION["contraseña"];?>">
+                                    <input type="password" class="form-control" name="contraseña" id="contraseña" value="<?php echo $_SESSION["contraseña"]; ?>">
                                     <?
                                     //comprobar que no este vacio y valido, si lo está pongo un error
                                     // if (enviado()) {
@@ -139,7 +150,7 @@
                                 </div>
                                 <div class="mb-4 px-2">
                                     <label for="idEmail" class="form-label">Email:</label>
-                                    <input type="email" class="form-control" name="email" id="idEmail" value="<?php echo $_SESSION["email"];?>">
+                                    <input type="email" class="form-control" name="email" id="idEmail" value="<?php echo $_SESSION["email"]; ?>">
                                     <?
                                     //comprobar que no este vacio y valido, si lo está pongo un error
                                     // if (enviado()) {
@@ -157,7 +168,7 @@
                                 </div>
                                 <div class="mb-4 px-2">
                                     <label for="idFecha" class="form-label">Fecha de nacimiento:</label>
-                                    <input type="text" class="form-control" name="fecha" id="fecha" placeholder="dd/mm/aaaa" value="<?php echo $_SESSION["fecha"];?>">
+                                    <input type="text" class="form-control" name="fecha" id="fecha" placeholder="dd/mm/aaaa" value="<?php echo $_SESSION["fecha"]; ?>">
                                     <?
                                     //comprobar que no este vacio, que sea fecha correcta y si lo está pongo un error
                                     // if (enviado()) {
