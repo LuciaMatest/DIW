@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #fadcdc;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    display: grid;
+    margin: 0;
+    align-content: center;
+    grid-template-columns: auto auto auto auto;
+}
+
+/*----Header-----*/
+header{
+    /*padding: 20px;*/
+    background-color: #07151B;
+    color: white;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: 1 / 1 / 2 / 6;
+}
+header > div.logo{
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+header > div.botones{
+    padding: 10px;
+    margin: 5px;
+    
+    
+}
+
+header  a.boton{
+    
+    margin: 5px;
+    text-decoration: none;
+    background-color: #ca3925;
+    color: white;
+    width: 100px;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+header  .boton:hover{
+    background-color: #fadcdc;
+    color: #ca3925;
+}
+
+/*------Ordenar el body-----*/
+
+.ordenar{
+    grid-area: 3 / 1 / 5 / 6;
+    
+}
+main{
+    display: flex;
+    padding: 10px;
+    flex: 100%;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+    flex: 100%;
+}
+article{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    background-color: #07151B;
+    color: #fadcdc;
+    border-radius: 10px;
+    flex: 30%;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap; 
+}
+
+article > img{
+    border-radius: 5%;
+    width: 350px;
+}
+
+article  a.boton{
+    
+    margin: 5px;
+    text-decoration: none;
+    background-color: #ca3925;
+    color: white;
+    width: 150px;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+article  .boton:hover{
+    background-color: #fadcdc;
+    color: #ca3925;
+}
+
+

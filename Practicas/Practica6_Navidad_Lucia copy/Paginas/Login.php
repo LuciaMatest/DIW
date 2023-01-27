@@ -19,7 +19,7 @@
     <header class="p-3" style="background-color: #f0f0f0;">
         <div class="mx-2">
             <div class="d-flex bd-highlight mb-1 align-items-center justify-content-space-between">
-                <a href="index.php" class="mx-auto mx-sm-auto ms-md-0 my-1" class="logo">
+                <a href="../index.php" class="mx-auto mx-sm-auto ms-md-0 my-1" class="logo">
                     <img src="../Imagen/logo.png" alt="logo" class="icono_logo" style="width: 200px;">
                 </a>
             </div>

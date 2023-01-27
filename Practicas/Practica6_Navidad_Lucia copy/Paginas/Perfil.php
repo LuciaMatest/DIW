@@ -216,7 +216,7 @@
         ?>
     </main>
 
-    <div class="container-fluid px-0">
+    <div class="container-fluid px-0 pt-1">
         <footer class="position-relative mt-3" style="background-color: #d4d4d4;">
             <ul class="nav justify-content-center ">
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Politica de Cookies</a></li>
