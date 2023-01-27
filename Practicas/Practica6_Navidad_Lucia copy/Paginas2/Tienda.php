@@ -148,37 +148,6 @@
         </main>
     </div>
 
-    <!-- <main class="py-5 bg-white">
-        <div class="container">
-            <div class="row">
-                <?
-                // foreach ($array_productos as $key) {
-                //     echo '<div class="col-lg-4" style="text-align: center;align-items: center;justify-content: center;">';
-                //     echo '<img src="../' . $key['imagen_baja'] . '" alt="productos_pelu">';
-                //     echo '<h3 class="fw-bold my-1" style="color: #303030;font-size: 25px;">' . $key['nombre'] . '</h3>';
-                //     echo '<p class="precio py-1" style="color: #444;font-size: 20px;"><b>' . $key['precio'] . '€</b></p>';
-                //     echo '<a href="Producto.php?cod_producto=' . $key['cod_producto'] . '" class="botonG">Comprar 
-                //             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                //                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                //             </svg>
-                //         </a>';
-                //     echo '</div>';
-                // }
-                ?>
-                <div class="col-lg-4" style="text-align: center;align-items: center;justify-content: center;">
-                    <img src="../Imagen/baja/1-baja.png" alt="productos_pelu">
-                    <h3 class="fw-bold my-1" style="color: #303030;font-size: 25px;">Tahe Natural Hair</h3>
-                    <p class="precio py-1" style="color: #444;font-size: 20px;"><b>19.95€</b></p>
-                    <a href="./Producto.php" class="botonG">Comprar
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                        </svg>
-                    </a>
-                </div>   
-            </div>
-        </div>
-    </main> -->
-
     <div class="container">
         <footer class="fixed-bottom" style="background-color: #d4d4d4;">
             <ul class="nav justify-content-center ">
