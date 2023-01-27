@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../CSS/style.css">
-    <title>Tienda - Bootstrap</title>
+    <title>Ventas - Bootstrap</title>
 </head>
 
 <body>
@@ -26,7 +26,6 @@
                     <img src="../Imagen/logo.png" alt="logo" class="icono_logo" style="width: 200px;">
                 </a>
                 <?php
-                // session_start();
                 // if (estaValidado()) {
                 //     echo '<div class="p-0 p-sm-0 p-md-2">';
                 //     echo '<a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
@@ -94,7 +93,6 @@
                     // if (esAdmin() || esModerador()) {
                     //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="./Almacen.php">Almacén</a></li>';
                     //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="./Albaran.php">Albarán</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Ventas</a></li>';
                     // }
                     ?>
                 </ul>
@@ -102,33 +100,70 @@
         </div>
     </nav>
 
-    <main>
-        <table class="table">
-            <thead>
+    <main class="p-3">
+        <h1>Ventas</h1>
+        <table class="table text-center">
+            <thead class="text-white" style="background-color: #be901b;">
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Código</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Total</th>
+                    <?
+                    // if (esAdmin()) {
+                    //     echo '<th scope="col">Eliminar</th>';
+                    //     echo '<th scope="col">Modificar</th>';
+                    // }
+                    ?>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
+                    <?php
+                    // try {
+                    //     $conexion = new PDO('mysql:host=' . $_SERVER['SERVER_ADDR'] . ';dbname=' . BBDD, USER, PASS);
+                    //     $sql = 'select * from ventas';
+                    //     $resultado = $conexion->query($sql);
+                    //     while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
+                    //         echo '<th scope="row">' . $row['id_ventas'] . '</th>';
+                    //         echo '<td>' . $row['usuario_ventas'] . '</td>';
+                    //         echo '<td>' . $row['fecha_compra'] . '</td>';
+                    //         echo '<td>' . $row['cod_producto'] . '</td>';
+                    //         echo '<td>' . $row['cantidad'] . '</td>';
+                    //         echo '<td>' . $row['precio_total'] . '</td>';
+                    //         if (esAdmin()) {
+                    //             echo "<td>";
+                    //             echo '<a href="../Funciones/modificarBD.php?opcion=elimina_venta&clave=' . $key['id_ventas'] . '" class="botonG"> 
+                    //                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                    //                         <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                    //                     </svg>
+                    //                 </a>';
+                    //             echo "</td>";
+                    //             echo "<td>";
+                    //             echo '<a href="../Funciones/modificarBD.php?opcion=modifica_ventas&clave=' . $key['id_ventas'] . '" class="botonG"> 
+                    //                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                    //                         <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                    //                     </svg>
+                    //                 </a>';
+                    //             echo "</td>";
+                    //         }
+                    //     }
+                    // } catch (Exception $ex) {
+                    //     if ($ex->getCode() == 2002) {
+                    //         echo '<span style="color:brown"> Fallo de conexión </span>';
+                    //     }
+                    //     if ($ex->getCode() == 1049) {
+                    //         echo '<span style="color:brown"> Base de datos desconocida </span>';
+                    //     }
+                    //     if ($ex->getCode() == 1045) {
+                    //         echo '<span style="color:brown"> Datos incorrectos </span>';
+                    //     }
+                    // } finally {
+                    //     unset($conexion);
+                    // }
+                    ?>
                 </tr>
             </tbody>
         </table>

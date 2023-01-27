@@ -25,7 +25,6 @@
                     <img src="../Imagen/logo.png" alt="logo" class="icono_logo" style="width: 200px;">
                 </a>
                 <?php
-                // session_start();
                 // if (estaValidado()) {
                 //     echo '<div class="p-0 p-sm-0 p-md-2">';
                 //     echo '<a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
@@ -78,7 +77,6 @@
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
                     <?php
-                    // session_start();
                     // if (estaValidado()) {
                     //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Carrito</a></li>';
                     //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Perfil</a></li>';

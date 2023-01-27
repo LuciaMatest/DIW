@@ -69,7 +69,6 @@
                 $resultado=$conexion->query($sql);
                 //Recorremos la tabla para ir incorporando cada dato a la tabla en el lugar correspondiente
                 while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
-                    echo '<tr>';
                     echo '<td>' . $row['id_ventas'] . '</td>';
                     echo '<td>' . $row['usuario_ventas'] . '</td>';
                     echo '<td>' . $row['fecha_compra'] . '</td>';
@@ -84,7 +83,6 @@
                         echo '<a href="../Funciones/modificarBD.php?opcion=modifica_ventas&clave='.$row['id_ventas'].'"><i class="fa-solid fa-cart-arrow-down"></i> Modificar</a>';
                         echo "</td>";     
                     }
-                    echo '</tr>';
                 }
             } catch (Exception $ex) {
                 if ($ex->getCode() == 2002) {
@@ -100,6 +98,7 @@
                 unset($conexion);
             }
             ?>
+            </tr>
         </table>
     </main>
     <footer>
