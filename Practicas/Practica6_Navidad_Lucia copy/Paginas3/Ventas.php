@@ -1,5 +1,6 @@
 <?php
 // require('../Funciones/funcionesBD.php');
+// require('../Funciones/BD.php');
 // require('../Conexion/conexionBD.php');
 // session_start();
 ?>
@@ -81,22 +82,18 @@
                     // session_start();
                     // if (estaValidado()) {
                     //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Carrito</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Perfil</a></li>';
+                    //     echo '<li class="opli nav-item p-3 fw-bold"><a href="../Paginas2/Perfil.php" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Perfil</a></li>';
                     //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Cerrar Sesión</a></li>';
-                    // } else {
-                    ?>
-                    <li class="opli nav-item p-3 p-md-0 fw-bold"><a href="Login.php" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Iniciar sesión</a></li>
-                    <?php
                     // }
                     ?>
                     <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../index.php">Inicio</a></li>
-                    <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Tienda</a></li>
+                    <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../Paginas2/Tienda.php">Tienda</a></li>
                     <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Contacto</a></li>
                     <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Ofertas</a></li>
                     <?php
                     // if (esAdmin() || esModerador()) {
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Almacén</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Albarán</a></li>';
+                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="./Almacen.php">Almacén</a></li>';
+                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="./Albaran.php">Albarán</a></li>';
                     //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Ventas</a></li>';
                     // }
                     ?>
@@ -105,32 +102,38 @@
         </div>
     </nav>
 
-    <div class="container py-3">
-        <main>
-            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-3 mb-4 text-center">
-                <?
-                // foreach ($array_productos as $key) {
-                //     echo '<div class="col">';
-                //     echo '<div class="card mb-4">';
-                //     echo '<div class="card-header bg-white">';
-                //     echo '<img src="../Imagen/' . $key['imagen_baja'] . '" alt="productos_pelu">';
-                //     echo '</div>';
-                //     echo '<div class="card-body">';
-                //     echo '<h3 class="fw-bold my-1" style="color: #303030;font-size: 25px;">' . $key['nombre'] . '</h3>';
-                //     echo '<p class="precio py-1" style="color: #444;font-size: 20px;"><b>' . $key['precio'] . '€</b></p>';
-                //     echo '<a href="Producto.php?cod_producto=' . $key['cod_producto'] . '" class="botonG">Comprar 
-                //             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                //                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                //             </svg>
-                //         </a>';
-                //     echo '</div>';
-                //     echo '</div>';
-                //     echo '</div>';
-                // }
-                ?>
-            </div>
-        </main>
-    </div>
+    <main>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
 
     <div class="container">
         <footer class="fixed-bottom" style="background-color: #d4d4d4;">
