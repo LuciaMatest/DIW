@@ -1,6 +1,7 @@
 <?php
 // require('../Funciones/funcionesBD.php');
 // require('../Funciones/BD.php');
+// session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">

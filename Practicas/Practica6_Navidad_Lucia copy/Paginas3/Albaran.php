@@ -90,16 +90,15 @@
     </nav>
 
     <main class="p-2 p-sm-3 p-md-3 p-lg-3">
-        <h1 class="text-center text-sm-center text-md-start text-lg-start">Almacén</h1>
+        <h1 class="text-center text-sm-center text-md-start text-lg-start">Albarán</h1>
         <table class="table text-center">
             <thead class="text-white" style="background-color: #be901b;">
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Usuario</th>
                     <th scope="col">Fecha</th>
                     <th scope="col">Código</th>
                     <th scope="col">Cantidad</th>
-                    <th scope="col">Total</th>
+                    <th scope="col">Usuario</th>
                     <?
                     // if (esAdmin()) {
                     //     echo '<th scope="col">Eliminar</th>';
@@ -113,15 +112,14 @@
                     <?php
                     // try {
                     //     $conexion = new PDO('mysql:host=' . $_SERVER['SERVER_ADDR'] . ';dbname=' . BBDD, USER, PASS);
-                    //     $sql = 'select * from ventas';
+                    //     $sql = 'select * from albaran';
                     //     $resultado = $conexion->query($sql);
                     //     while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
-                    //         echo '<th scope="row">' . $row['id_ventas'] . '</th>';
-                    //         echo '<td>' . $row['usuario_ventas'] . '</td>';
-                    //         echo '<td>' . $row['fecha_compra'] . '</td>';
+                    //         echo '<th scope="row">' . $row['id_albaran'] . '</th>';
+                    //         echo '<td>' . $row['fecha_albaran'] . '</td>';
                     //         echo '<td>' . $row['cod_producto'] . '</td>';
                     //         echo '<td>' . $row['cantidad'] . '</td>';
-                    //         echo '<td>' . $row['precio_total'] . '</td>';
+                    //         echo '<td>' . $row['usuario_albaran'] . '</td>';
                     //         if (esAdmin()) {
                     //             echo "<td>";
                     //             echo '<a href="../Funciones/modificarBD.php?opcion=elimina_venta&clave=' . $key['id_ventas'] . '" class="botonG"> 
@@ -167,12 +165,6 @@
             </ul>
         </footer>
     </div>
-    <?php
-    // if (isset($_SESSION['error'])) {
-    //     echo $_SESSION['error'];
-    // }
-    // unset($_SESSION['error']);
-    ?>
 </body>
 
 </html>

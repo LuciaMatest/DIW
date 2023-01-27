@@ -1,6 +1,6 @@
 <?php
-    define('USER', 'manu');
-    define('PASS', 'manu');
+    define('USER', 'lucia');
+    define('PASS', 'lucia');
     define('BBDD', 'tienda');
 
 ?>

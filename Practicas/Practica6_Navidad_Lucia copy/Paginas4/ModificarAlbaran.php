@@ -1,7 +1,6 @@
 <?php
 // require('../Funciones/funcionesBD.php');
 // require('../Funciones/BD.php');
-// require('../Conexion/conexionBD.php');
 // session_start();
 ?>
 <!DOCTYPE html>
@@ -16,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../CSS/style.css">
-    <title>Almacen - Bootstrap</title>
+    <title>ModAlbarán - Bootstrap</title>
 </head>
 
 <body>
@@ -36,7 +35,7 @@
                 //     Carrito</a>';
                 //     echo '</div>';
                 //     echo '<div class="p-0 p-sm-0 p-md-2">';
-                //     echo '<a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
+                //     echo '<a href="../Paginas2/Perfil.php" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
                 //     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                 //         <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                 //         <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
@@ -51,7 +50,7 @@
                 //     </svg>
                 //     Cerrar Sesión</a>';
                 //     echo '</div>';
-                // } 
+                // }
                 ?>
             </div>
         </div>
@@ -70,7 +69,7 @@
                     <?php
                     // if (estaValidado()) {
                     //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Carrito</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a href="../Paginas2/Perfil.php" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Perfil</a></li>';
+                    //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Perfil</a></li>';
                     //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Cerrar Sesión</a></li>';
                     // }
                     ?>
@@ -80,100 +79,101 @@
                     <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Ofertas</a></li>
                     <?php
                     // if (esAdmin() || esModerador()) {
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="./Albaran.php">Albarán</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="./Ventas.php">Ventas</a></li>';
+                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../Paginas3/Almacen.php">Almacén</a></li>';
+                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../Paginas3/Albaran.php">Albarán</a></li>';
+                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../Paginas3/Ventas.php">Ventas</a></li>';
                     // }
                     ?>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <main class="p-2 p-sm-3 p-md-3 p-lg-3">
-        <h1 class="text-center text-sm-center text-md-start text-lg-start">Almacén</h1>
-        <table class="table text-center">
-            <thead class="text-white" style="background-color: #be901b;">
-                <tr>
-                    <th scope="col">Código</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Descripcion</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Stock</th>
-                    <?
-                    // if (esAdmin()) {
-                    //     echo '<th scope="col">Modificar</th>';
-                    // }
-                    ?>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <?php
-                    // try {
-                    //     $conexion = new PDO('mysql:host=' . $_SERVER['SERVER_ADDR'] . ';dbname=' . BBDD, USER, PASS);
-                    //     $sql = 'select * from ventas';
-                    //     $resultado = $conexion->query($sql);
-                    //     while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
-                    //         echo '<th scope="row">' . $row['cod_producto'] . '</th>';
-                    //         echo '<td>' . $row['nombre'] . '</td>';
-                    //         echo '<td>' . $row['descripcion'] . '</td>';
-                    //         echo '<td>' . $row['precio'] . '</td>';
-                    //         if (esAdmin() || esModerador()) {
-                    //             echo '<td>';
-                    //             echo '<form action="../Funciones/modificarBD.php">';
-                    //             echo '<p class="stock"> ' . $row['stock'] . ' </p>';
-                    //             echo '<input type="number" name="cantidad" size="2" value="1" class="w-25">';
-                    //             echo '<a href="../Funciones/modificarBD.php?opcion=modifica_ventas&clave=' . $key['id_ventas'] . '" style="color: #be901b;"> 
-                    //                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
-                    //                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                    //                         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                    //                     </svg>
-                    //                 </a>';
-                    //             echo '</form>';
-                    //             echo '</td>';
-                    //         }
-                    //         if (esAdmin()) {
-                    //             echo "<td>";
-                    //             echo '<a href="../Funciones/modificarBD.php?opcion=modifica_ventas&clave=' . $key['id_ventas'] . '" class="botonG"> 
-                    //                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                    //                         <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-                    //                     </svg>
-                    //                 </a>';
-                    //             echo "</td>";
-                    //         }
-                    //     }
-                    // } catch (Exception $ex) {
-                    //     if ($ex->getCode() == 2002) {
-                    //         echo '<span style="color:brown"> Fallo de conexión </span>';
-                    //     }
-                    //     if ($ex->getCode() == 1049) {
-                    //         echo '<span style="color:brown"> Base de datos desconocida </span>';
-                    //     }
-                    //     if ($ex->getCode() == 1045) {
-                    //         echo '<span style="color:brown"> Datos incorrectos </span>';
-                    //     }
-                    // } finally {
-                    //     unset($conexion);
-                    // }
-                    ?>
-                </tr>
-            </tbody>
-        </table>
-        <?
-        // if (esAdmin()) {
-        //     echo '<a href="../Funciones/modificarBD.php?opcion=añadir_productos" style="color: #be901b;"> Añadir producto
-        //              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
-        //                  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-        //                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-        //              </svg>
-        //          </a>';
+    <main class="pt-1">
+        <?php
+        // $operacion = $_REQUEST['op'];
+        // if (enviado()) {
+        //     if (validarAlbaran()) {
+        //         actualizarRegistro();
+        //         header("Location: ./almacen.php");
+        //         exit;
+        //     }
+        // } else {
+        //     $registro = findByIdALB($_REQUEST['id'], 'albaran');
         // }
+        // $id = $_REQUEST['id'];
         ?>
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-5 col-md-9 col-sm-10">
+                    <h1 class="text-center fw-bold pb-3" style="color: #444;">Albarán</h1>
+                    <div class="card" style="background-color: #d4d4d4;border-style: none;">
+                        <div class="card-title text-center">
+                            <h2 class="px-3 pt-4 fw-bold" style="color: #555;">Modificar producto</h2>
+                        </div>
+                        <div class="card-body pt-0">
+                            <form action="./ModificarAlbaran.php" method="post">
+                                <input type="hidden" name="op" value="<? // echo $operacion; 
+                                                                        ?>">
+                                <div class="mb-4 px-2">
+                                    <label for="idAlb" class="form-label">ID</label>
+                                    <input type="text" class="form-control" name="id" id="idAlb" aria-label="id" value="<? // echo $registro[0]['id_albaran']; 
+                                                                                                                        ?>" readonly>
+                                </div>
+                                <div class="mb-4 px-2">
+                                    <label for="idFecha" class="form-label">Fecha</label>
+                                    <input type="text" class="form-control" name="fecha" id="fecha" placeholder="aaaa-mm-dd" value="<? // echo $registro[0]['fecha_albaran']; 
+                                                                                                                                    ?>">
+                                    <?
+                                    // if (enviado()) {
+                                    //     if (vacio("fecha")) {
+                                    ?>
+                                    <!-- <span style="color:brown"> Introduce fecha</span> -->
+                                    <?
+                                    // } elseif (!patronFecha()) {
+                                    ?>
+                                    <!-- <span style="color:brown"> Fecha no válida, revise</span> -->
+                                    <?
+                                    //     }
+                                    // }
+                                    ?>
+                                </div>
+                                <div class="mb-4 px-2">
+                                    <label for="idProd" class="form-label">Código</label>
+                                    <input type="text" class="form-control" name="id" id="idProd" aria-label="id" value="<? // echo $registro[0]['cod_producto']; 
+                                                                                                                            ?>" readonly>
+                                </div>
+                                <div class="mb-4 px-2">
+                                    <label for="idCantidad" class="form-label">Cantidad</label>
+                                    <input type="number" class="form-control" name="cantidad" id="cantidad" value="<? // echo $registro[0]['cantidad']; 
+                                                                                                                    ?>">
+                                    <?
+                                    // if (enviado()) {
+                                    //     if (vacio("cantidad")) {
+                                    ?>
+                                    <!-- <span style="color:brown"> Introduce cantidad</span> -->
+                                    <?
+                                    // } 
+                                    ?>
+                                </div>
+                                <div class="mb-4 px-2">
+                                    <label for="idUsuario" class="form-label">Usuario</label>
+                                    <input type="text" class="form-control" name="usuario" id="idUsuario" value="<? // echo $registro[0]['usuario_albaran']; 
+                                                                                                                    ?>" readonly>
+                                </div>
+                                <div class="text-center">
+                                    <input type="submit" value="Enviar" name="enviar" class="botonG">
+                                    <a href="../Paginas3/Albaran.php" class="ps-3"> Volver</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-
-    <div class="container">
-        <footer class="fixed-bottom" style="background-color: #d4d4d4;">
+    <div class="container-fluid px-0 pt-1">
+        <footer class="position-relative mt-3" style="background-color: #d4d4d4;">
             <ul class="nav justify-content-center ">
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Politica de Cookies</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Politica de Privacidad</a></li>
