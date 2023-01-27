@@ -17,7 +17,7 @@
     <title>Producto - Bootstrap</title>
 </head>
 
-<body>
+<body class="bg-white">
     <?php
     // try {
     //     $conexion = new PDO('mysql:host=' . $_SERVER['SERVER_ADDR'] . ';dbname=' . BBDD, USER, PASS);
@@ -129,33 +129,48 @@
         </div>
     </nav>
 
-    <main class="py-5 bg-white">
+    <main class="py-5">
         <div class="container">
-            <div class="row">
+            <div class="row mb-2">
                 <?
                 // foreach ($array_productos as $key) {
-                //     echo '<div class="col-lg-4" style="text-align: center;align-items: center;justify-content: center;">';
-                //     echo '<img src="../' . $key['imagen_baja'] . '" alt="productos_pelu">';
-                //     echo '<h3 class="fw-bold my-1" style="color: #303030;font-size: 25px;">' . $key['nombre'] . '</h3>';
-                //     echo '<p class="precio py-1" style="color: #444;font-size: 20px;"><b>' . $key['precio'] . '€</b></p>';
-                //     echo '<a href="producto.php?cod_producto=' . $key['cod_producto'] . '" class="boton">Comprar 
-                //             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                //                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                //             </svg>
-                //         </a>';
-                //     echo '</div>';
+                //     if ($key['cod_producto'] == $_REQUEST['cod_producto']) {
+                //         echo '<div class="col-md-12">';
+                //         echo '<div class="row g-0 rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative">';
+                //         echo '<div class="col-12 col-sm-12 col-md-4 col-lg-4 d-block d-lg-block">';
+                //         echo '<img src="../Imagen/' . $key['imagen_alta'] . '" alt="productos_pelu">';
+                //         echo '</div>';
+                //         echo '<div class="col-12 col-sm-12 col-md-8 col-lg-8 p-4 d-flex flex-column position-static">';
+                //         echo '<h3 class="fw-bold my-1 w-100 mb-1" style="color: #303030;font-size: 18px; text-transform: uppercase;line-height: 30px;">' . $key['nombre'] . '</h3>';
+                //         echo '<p class="precio py-1" style="color: #444;font-size: 45px;"><b>' . $key['precio'] . '€</b></p>';
+                //         echo '<p class="py-1"><b>Cod.' . $key['cod_producto'] . '</b>: ' . $key['descripcion'] . '</p>';
+                //         echo '<p class="unidad">Unidades:</p>';
+                //         echo '<form action="./carrito.php">';
+                //         echo '<input type="number" class="contar" name="cantidad" value="1" title="Cantidad" size="4" min="1" max="" step="1" inputmode="numeric" autocomplete="off">';
+                //         if (estaValidado()) {
+                //             echo '<a href="./Producto.php" class="botonG">Comprar
+                //                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                //                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                //                     </svg>
+                //                 </a>';
+                //         } else {
+                //             echo '<a href="../Paginas1/Login.php" class="botonG">Comprar
+                //                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                //                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                //                     </svg>
+                //                 </a>';
+                //         }
+                //         echo '<p class="stock px-5 py-3" style="color: rgb(116, 116, 116);">Stock: ' . $key['stock'] . ' disponibles</p>';
+                //         echo '<input type="hidden" name="cod_producto" value="' . $key['cod_producto'] . '">';
+                //         echo '<input type="hidden" name="precio" value="' . $key['precio'] . '">';
+                //         echo '<input type="hidden" name="stock" value="' . $key['stock'] . '">';
+                //         echo '</form>';
+                //         echo '</div>';
+                //         echo '</div>';
+                //         echo '</div>';
+                //     }
                 // }
                 ?>
-                <div class="col-lg-4" style="text-align: center;align-items: center;justify-content: center;">
-                    <img src="../Imagen/baja/1-baja.png" alt="productos_pelu">
-                    <h3 class="fw-bold my-1" style="color: #303030;font-size: 25px;">Tahe Natural Hair</h3>
-                    <p class="precio py-1" style="color: #444;font-size: 20px;"><b>19.95€</b></p>
-                    <a href="" class="botonG" href="#">Comprar
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                        </svg>
-                    </a>
-                </div>
             </div>
         </div>
     </main>
