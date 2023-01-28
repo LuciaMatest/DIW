@@ -93,16 +93,16 @@ require('../Conexion/conexionBD.php');
         <?php
         $operacion = $_REQUEST['op'];
         if (enviado()) {
-            if ($_REQUEST['op'] == 'edi') {
+            if ($_REQUEST['op'] == 'editar') {
                 if (validarProducto()) {
                     actualizarProducto();
-                    header("Location: ./almacen.php");
+                    header("Location: ../Paginas3/Almacen.php");
                     exit;
                 }
             } elseif ($_REQUEST['op'] == 'nue') {
                 if (validarProducto()) {
                     nuevoProducto();
-                    header("Location: ./almacen.php");
+                    header("Location: ../Paginas3/Almacen.php");
                     exit;
                 }
             }

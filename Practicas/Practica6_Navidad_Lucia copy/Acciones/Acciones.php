@@ -51,7 +51,7 @@ require("../Funciones/Funciones.php");
     <?
     $operacion = $_REQUEST['op'];
 
-    if ($operacion == 'eli') {
+    if ($operacion == 'eliminar') {
         $tabla = $_REQUEST['tabla'];
         $id = $_REQUEST['id'];
         switch ($tabla) {
@@ -68,7 +68,7 @@ require("../Funciones/Funciones.php");
                 break;
         }
     }
-    if ($operacion == 'aum') {
+    if ($operacion == 'añadir') {
         $id = $_REQUEST['id'];
         $stock = (int)$_REQUEST['stock'];
         $cantidad = (int)$_REQUEST['cantidad'];
@@ -76,7 +76,7 @@ require("../Funciones/Funciones.php");
         actualizarStock($nuevo);
         header("Location: ../Paginas3/Almacen.php");
     }
-    if ($operacion == 'edi') {
+    if ($operacion == 'editar') {
         $id = $_REQUEST['id'];
         header('Location: ../Paginas4/AñadirProducto.php?id=' . $id . '&op=edi');
         exit;
