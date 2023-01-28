@@ -1,5 +1,4 @@
 <?php
-require '../Conexion/conexionBD.php';
 // BBDD
 function usarBBDD()
 {

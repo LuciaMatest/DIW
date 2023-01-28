@@ -1,7 +1,7 @@
 <?php
-// require('../Funciones/funcionesBD.php');
-// require('../Funciones/BD.php');
-// session_start();
+session_start();
+require('../Funciones/Funciones.php');
+require('../Conexion/conexionBD.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -26,31 +26,31 @@
                     <img src="../Imagen/logo.png" alt="logo" class="icono_logo" style="width: 200px;">
                 </a>
                 <?php
-                // if (estaValidado()) {
-                //     echo '<div class="p-0 p-sm-0 p-md-2">';
-                //     echo '<a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
-                //     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                //         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                //     </svg>
-                //     Carrito</a>';
-                //     echo '</div>';
-                //     echo '<div class="p-0 p-sm-0 p-md-2">';
-                //     echo '<a href="../Paginas2/Perfil.php" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
-                //     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                //         <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                //         <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                //     </svg>
-                //     Perfil</a>';
-                //     echo '</div>';
-                //     echo '<div class="p-0 p-sm-0 p-md-2">';
-                //     echo '<a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
-                //     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                //         <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
-                //         <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                //     </svg>
-                //     Cerrar Sesión</a>';
-                //     echo '</div>';
-                // }
+                if (estaValidado()) {
+                    echo '<div class="p-0 p-sm-0 p-md-2">';
+                    echo '<a href="../Acciones/Carrito.php" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                    Carrito</a>';
+                    echo '</div>';
+                    echo '<div class="p-0 p-sm-0 p-md-2">';
+                    echo '<a href="../Paginas2/Perfil.php" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                    </svg>
+                    Perfil</a>';
+                    echo '</div>';
+                    echo '<div class="p-0 p-sm-0 p-md-2">';
+                    echo '<a href="../Acciones/Logout.php" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                    </svg>
+                    Cerrar Sesión</a>';
+                    echo '</div>';
+                }
                 ?>
             </div>
         </div>
@@ -67,22 +67,22 @@
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
                     <?php
-                    // if (estaValidado()) {
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Carrito</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Perfil</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Cerrar Sesión</a></li>';
-                    // }
+                    if (estaValidado()) {
+                        echo '<li class="opli nav-item p-3 p-md-0 fw-bold"><a href="../Acciones/Carrito.php" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Carrito</a></li>';
+                        echo '<li class="opli nav-item p-3 p-md-0 fw-bold"><a href="../Paginas2/Perfil.php" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Perfil</a></li>';
+                        echo '<li class="opli nav-item p-3 p-md-0 fw-bold"><a href="../Acciones/Logout.php" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Cerrar Sesión</a></li>';
+                    }
                     ?>
                     <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../index.php">Inicio</a></li>
                     <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../Paginas2/Tienda.php">Tienda</a></li>
                     <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Contacto</a></li>
                     <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Ofertas</a></li>
                     <?php
-                    // if (esAdmin() || esModerador()) {
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../Paginas3/Almacen.php">Almacén</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../Paginas3/Albaran.php">Albarán</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../Paginas3/Ventas.php">Ventas</a></li>';
-                    // }
+                    if (esAdmin() || esModerador()) {
+                        echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../Paginas3/Almacen.php">Almacén</a></li>';
+                        echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../Paginas3/Albaran.php">Albarán</a></li>';
+                        echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../Paginas3/Ventas.php">Ventas</a></li>';
+                    }
                     ?>
                 </ul>
             </div>
@@ -90,17 +90,17 @@
     </nav>
     <main class="pt-1">
         <?php
-        // $operacion = $_REQUEST['op'];
-        // if (enviado()) {
-        //     if (validarAlbaran()) {
-        //         actualizarRegistro();
-        //         header("Location: ./almacen.php");
-        //         exit;
-        //     }
-        // } else {
-        //     $registro = findByIdALB($_REQUEST['id'], 'albaran');
-        // }
-        // $id = $_REQUEST['id'];
+        $operacion = $_REQUEST['op'];
+        if (enviado()) {
+            if (validarAlbaran()) {
+                actualizarRegistro();
+                header("Location: ./almacen.php");
+                exit;
+            }
+        } else {
+            $registro = findByIdALB($_REQUEST['id'], 'albaran');
+        }
+        $id = $_REQUEST['id'];
         ?>
         <div class="container">
             <div class="row justify-content-center mt-5">
@@ -112,52 +112,53 @@
                         </div>
                         <div class="card-body pt-0">
                             <form action="./ModificarAlbaran.php" method="post">
-                                <input type="hidden" name="op" value="<? // echo $operacion; 
+                                <input type="hidden" name="op" value="<? echo $operacion;
                                                                         ?>">
                                 <div class="mb-4 px-2">
                                     <label for="idAlb" class="form-label">ID</label>
-                                    <input type="text" class="form-control" name="id" id="idAlb" aria-label="id" value="<? // echo $registro[0]['id_albaran']; 
+                                    <input type="text" class="form-control" name="id" id="idAlb" aria-label="id" value="<? echo $registro[0]['id_albaran'];
                                                                                                                         ?>" readonly>
                                 </div>
                                 <div class="mb-4 px-2">
                                     <label for="idFecha" class="form-label">Fecha</label>
-                                    <input type="text" class="form-control" name="fecha" id="fecha" placeholder="aaaa-mm-dd" value="<? // echo $registro[0]['fecha_albaran']; 
+                                    <input type="text" class="form-control" name="fecha" id="fecha" placeholder="aaaa-mm-dd" value="<? echo $registro[0]['fecha_albaran'];
                                                                                                                                     ?>">
                                     <?
-                                    // if (enviado()) {
-                                    //     if (vacio("fecha")) {
+                                    if (enviado()) {
+                                        if (vacio("fecha")) {
                                     ?>
-                                    <!-- <span style="color:brown"> Introduce fecha</span> -->
+                                            <span style="color:brown"> Introduce fecha</span>
+                                        <?
+                                        } elseif (!patronFecha()) {
+                                        ?>
+                                            <span style="color:brown"> Fecha no válida, revise</span>
                                     <?
-                                    // } elseif (!patronFecha()) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Fecha no válida, revise</span> -->
-                                    <?
-                                    //     }
-                                    // }
+                                        }
+                                    }
                                     ?>
                                 </div>
                                 <div class="mb-4 px-2">
                                     <label for="idProd" class="form-label">Código</label>
-                                    <input type="text" class="form-control" name="id" id="idProd" aria-label="id" value="<? // echo $registro[0]['cod_producto']; 
+                                    <input type="text" class="form-control" name="id" id="idProd" aria-label="id" value="<? echo $registro[0]['cod_producto'];
                                                                                                                             ?>" readonly>
                                 </div>
                                 <div class="mb-4 px-2">
                                     <label for="idCantidad" class="form-label">Cantidad</label>
-                                    <input type="number" class="form-control" name="cantidad" id="cantidad" value="<? // echo $registro[0]['cantidad']; 
+                                    <input type="number" class="form-control" name="cantidad" id="cantidad" value="<? echo $registro[0]['cantidad'];
                                                                                                                     ?>">
                                     <?
-                                    // if (enviado()) {
-                                    //     if (vacio("cantidad")) {
+                                    if (enviado()) {
+                                        if (vacio("cantidad")) {
                                     ?>
-                                    <!-- <span style="color:brown"> Introduce cantidad</span> -->
+                                            <span style="color:brown"> Introduce cantidad</span>
                                     <?
-                                    // } 
+                                        }
+                                    }
                                     ?>
                                 </div>
                                 <div class="mb-4 px-2">
                                     <label for="idUsuario" class="form-label">Usuario</label>
-                                    <input type="text" class="form-control" name="usuario" id="idUsuario" value="<? // echo $registro[0]['usuario_albaran']; 
+                                    <input type="text" class="form-control" name="usuario" id="idUsuario" value="<? echo $registro[0]['usuario_albaran'];
                                                                                                                     ?>" readonly>
                                 </div>
                                 <div class="text-center">

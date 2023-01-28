@@ -1,7 +1,8 @@
 <?php
-// require('Funciones/funcionesBD.php');
-// require('Conexion/conexionBD.php');
-// session_start();
+session_start();
+require('../Funciones/Funciones.php');
+require('../Conexion/BBDD.php');
+require('../Conexion/conexionBD.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">

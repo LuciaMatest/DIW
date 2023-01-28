@@ -1,7 +1,7 @@
 <?php
-// require('../Funciones/funcionesBD.php');
-// require('../Funciones/BD.php');
-// session_start();
+session_start();
+require('../Funciones/Funciones.php');
+require('../Conexion/conexionBD.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -49,155 +49,159 @@
     </nav>
     <main class="pt-1">
         <?php
-        // if (verificar()){
-        //     nuevoUsuario();
-        // }else{
+        if (verificar()) {
+            nuevoUsuario();
+        } else {
         ?>
-        <div class="container">
-            <div class="row justify-content-center mt-5">
-                <div class="col-lg-5 col-md-9 col-sm-10">
-                    <h1 class="text-center fw-bold pb-3" style="color: #444;">Mi cuenta</h1>
-                    <div class="card" style="background-color: #d4d4d4;border-style: none;">
-                        <div class="card-title text-center">
-                            <h2 class="px-3 pt-4 fw-bold" style="color: #555;">Registrarse</h2>
-                        </div>
-                        <div class="card-body pt-0">
-                            <form action="./Sign.php" method="post">
-                                <div class="mb-4 px-2">
-                                    <label for="idUser" class="form-label">Nombre de usuario</label>
-                                    <input type="text" class="form-control" name="user" id="user" value="<? // if (enviado() && !vacio("user")) {
-                                                                                                            //     echo $_REQUEST["user"];} 
-                                                                                                            ?>">
-                                    <?
-                                    // if (enviado()) {
-                                    //     if (vacio("user")) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Introduce usuario</span> -->
-                                    <?
-                                    // } elseif (!validarUsuario()) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Usuario ya registrado, revise</span> -->
-                                    <?
-                                    //     }
-                                    // }
-                                    ?>
-                                </div>
+            <div class="container">
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-5 col-md-9 col-sm-10">
+                        <h1 class="text-center fw-bold pb-3" style="color: #444;">Mi cuenta</h1>
+                        <div class="card" style="background-color: #d4d4d4;border-style: none;">
+                            <div class="card-title text-center">
+                                <h2 class="px-3 pt-4 fw-bold" style="color: #555;">Registrarse</h2>
+                            </div>
+                            <div class="card-body pt-0">
+                                <form action="./Sign.php" method="post">
+                                    <div class="mb-4 px-2">
+                                        <label for="idUser" class="form-label">Nombre de usuario</label>
+                                        <input type="text" class="form-control" name="user" id="user" value="<? if (enviado() && !vacio("user")) {
+                                                                                                                    echo $_REQUEST["user"];
+                                                                                                                }
+                                                                                                                ?>">
+                                        <?
+                                        if (enviado()) {
+                                            if (vacio("user")) {
+                                        ?>
+                                                <span style="color:brown"> Introduce usuario</span>
+                                            <?
+                                            } elseif (!validarUsuario()) {
+                                            ?>
+                                                <span style="color:brown"> Usuario ya registrado, revise</span>
+                                        <?
+                                            }
+                                        }
+                                        ?>
+                                    </div>
 
-                                <div class="mb-4 px-2">
-                                    <label for="idContraseña" class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control" name="contraseña" id="contraseña">
-                                    <?
-                                    // if (enviado()) {
-                                    //     if (vacio("contraseña")) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Introduce contraseña</span> -->
-                                    <?
-                                    // } elseif (!patronContraseña()) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Contraseña no válida, revise</span> -->
-                                    <?
-                                    //     }
-                                    // }
-                                    ?>
-                                </div>
-                                <div class="mb-4 px-2">
-                                    <label for="idContraseña2" class="form-label">Repite la contraseña</label>
-                                    <input type="password" class="form-control" name="contraseña2" id="contraseña2">
-                                    <?
-                                    // if (enviado()) {
-                                    //     if (vacio('contraseña2')) {
-                                    ?>
-                                    <!-- <span style="color:brown">Introduce la contraseña de nuevo</span> -->
-                                    <?
-                                    // } elseif ($_REQUEST['contraseña'] != $_REQUEST['contraseña2']) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Introduce de nuevo la contraseña</span> -->
-                                    <?
-                                    //     }
-                                    // }
-                                    ?>
-                                </div>
-                                <div class="mb-4 px-2">
-                                    <label for="idNombre" class="form-label">Nombre </label>
-                                    <input type="text" class="form-control" name="nombre" id="idNombre" value="<?  // if (enviado() && !vacio("nombre")) {
-                                                                                                                //     echo $_REQUEST["nombre"];}
-                                                                                                                ?>">
-                                    <?
-                                    // if (enviado()) {
-                                    //     if (vacio("nombre")) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Introduce nombre</span> -->
-                                    <?
-                                    //     }
-                                    // }
-                                    ?>
-                                </div>
-                                <div class="mb-4 px-2">
-                                    <label for="idEmail" class="form-label">Email *</label>
-                                    <input type="email" class="form-control" name="email" id="idEmail" value="<? // if (enviado() && !vacio("email")) {
-                                                                                                                //     echo $_REQUEST["email"];} 
-                                                                                                                ?>">
-                                    <?
-                                    // if (enviado()) {
-                                    //     if (vacio("email")) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Introduce email</span> -->
-                                    <?
-                                    // } elseif (!patronEmail()) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Email no válida, revise</span> -->
-                                    <?
-                                    //     }
-                                    // }
-                                    ?>
-                                </div>
-                                <div class="mb-4 px-2">
-                                    <label for="idFecha" class="form-label">Fecha de nacimiento *</label>
-                                    <input type="text" class="form-control" name="fecha" id="fecha" placeholder="aaaa-mm-dd" value="<? // if (enviado() && !vacio("fecha")) {
-                                                                                                                                    //     echo $_REQUEST["fecha"];} 
-                                                                                                                                    ?>">
-                                    <?
-                                    // if (enviado()) {
-                                    //     if (vacio("fecha")) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Introduce fecha</span> -->
-                                    <?
-                                    // } elseif (!patronFecha()) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Fecha no válida, revise</span> -->
-                                    <?
-                                    //     }
-                                    // }
-                                    ?>
-                                </div>
-                                <div class="mb-4 px-2">
-                                    <label for="idOpcion">Rol</label>
-                                    <select name="rol" id="idOpcion" class="w-100 d-inline-block bg-white" style="box-sizing: border-box;border-radius: 4px;border: 1px solid #ccc;padding: 12px 20px;margin: 8px 0;">
-                                        <option value="0">Seleccione una opción</option>
-                                        <option value="ADM01">Administrador</option>
-                                        <option value="M0001">Moderador</option>
-                                        <option value="U0001">Usuario normal</option>
-                                    </select>
-                                    <?php
-                                    // if (existe('rol') && $_REQUEST['rol'] == 0) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Introduce un rol</span> -->
-                                    <?
-                                    // }
-                                    ?>
-                                </div>
-                                <div class="text-center">
-                                    <input type="submit" value="Registrar" name="enviar" class="botonG">
-                                    <a href="Login.php" class="ps-3"> Volver</a>
-                                </div>
-                            </form>
+                                    <div class="mb-4 px-2">
+                                        <label for="idContraseña" class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control" name="contraseña" id="contraseña">
+                                        <?
+                                        if (enviado()) {
+                                            if (vacio("contraseña")) {
+                                        ?>
+                                                <span style="color:brown"> Introduce contraseña</span>
+                                            <?
+                                            } elseif (!patronContraseña()) {
+                                            ?>
+                                                <span style="color:brown"> Contraseña no válida, revise</span>
+                                        <?
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                    <div class="mb-4 px-2">
+                                        <label for="idContraseña2" class="form-label">Repite la contraseña</label>
+                                        <input type="password" class="form-control" name="contraseña2" id="contraseña2">
+                                        <?
+                                        if (enviado()) {
+                                            if (vacio('contraseña2')) {
+                                        ?>
+                                                <span style="color:brown">Introduce la contraseña de nuevo</span>
+                                            <?
+                                            } elseif ($_REQUEST['contraseña'] != $_REQUEST['contraseña2']) {
+                                            ?>
+                                                <span style="color:brown"> Introduce de nuevo la contraseña</span>
+                                        <?
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                    <div class="mb-4 px-2">
+                                        <label for="idNombre" class="form-label">Nombre </label>
+                                        <input type="text" class="form-control" name="nombre" id="idNombre" value="<? if (enviado() && !vacio("nombre")) {
+                                                                                                                        echo $_REQUEST["nombre"];
+                                                                                                                    }
+                                                                                                                    ?>">
+                                        <?
+                                        if (enviado()) {
+                                            if (vacio("nombre")) {
+                                        ?>
+                                                <span style="color:brown"> Introduce nombre</span>
+                                        <?
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                    <div class="mb-4 px-2">
+                                        <label for="idEmail" class="form-label">Email *</label>
+                                        <input type="email" class="form-control" name="email" id="idEmail" value="<? if (enviado() && !vacio("email")) {
+                                                                                                                        echo $_REQUEST["email"];
+                                                                                                                    }
+                                                                                                                    ?>">
+                                        <?
+                                        if (enviado()) {
+                                            if (vacio("email")) {
+                                        ?>
+                                                <span style="color:brown"> Introduce email</span>
+                                            <?
+                                            } elseif (!patronEmail()) {
+                                            ?>
+                                                <span style="color:brown"> Email no válida, revise</span>
+                                        <?
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                    <div class="mb-4 px-2">
+                                        <label for="idFecha" class="form-label">Fecha de nacimiento *</label>
+                                        <input type="text" class="form-control" name="fecha" id="fecha" placeholder="aaaa-mm-dd" value="<? if (enviado() && !vacio("fecha")) {
+                                                                                                                                            echo $_REQUEST["fecha"];
+                                                                                                                                        }
+                                                                                                                                        ?>">
+                                        <?
+                                        if (enviado()) {
+                                            if (vacio("fecha")) {
+                                        ?>
+                                                <span style="color:brown"> Introduce fecha</span>
+                                            <?
+                                            } elseif (!patronFecha()) {
+                                            ?>
+                                                <span style="color:brown"> Fecha no válida, revise</span>
+                                        <?
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                    <div class="mb-4 px-2">
+                                        <label for="idOpcion">Rol</label>
+                                        <select name="rol" id="idOpcion" class="w-100 d-inline-block bg-white" style="box-sizing: border-box;border-radius: 4px;border: 1px solid #ccc;padding: 12px 20px;margin: 8px 0;">
+                                            <option value="0">Seleccione una opción</option>
+                                            <option value="ADM01">Administrador</option>
+                                            <option value="M0001">Moderador</option>
+                                            <option value="U0001">Usuario normal</option>
+                                        </select>
+                                        <?php
+                                        if (existe('rol') && $_REQUEST['rol'] == 0) {
+                                        ?>
+                                            <span style="color:brown"> Introduce un rol</span>
+                                        <?
+                                        }
+                                        ?>
+                                    </div>
+                                    <div class="text-center">
+                                        <input type="submit" value="Registrar" name="enviar" class="botonG">
+                                        <a href="Login.php" class="ps-3"> Volver</a>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         <?php
-        // }
+        }
         ?>
     </main>
 
@@ -210,10 +214,10 @@
         </footer>
     </div>
     <?php
-    // if (isset($_SESSION['error'])) {
-    //     echo $_SESSION['error'];
-    // }
-    // unset($_SESSION['error']);
+    if (isset($_SESSION['error'])) {
+        echo $_SESSION['error'];
+    }
+    unset($_SESSION['error']);
     ?>
 </body>
 

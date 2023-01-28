@@ -1,6 +1,7 @@
 <?php
 session_start();
 require('../Funciones/Funciones.php');
+require('../Conexion/conexionBD.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -58,12 +59,12 @@ require('../Funciones/Funciones.php');
                         <div class="card-body pt-0">
                             <form action="../Funciones/Validaciones.php" method="post">
                                 <div class="mb-4 px-2">
-                                    <label for="username" class="form-label">Usuario</label>
-                                    <input type="text" class="form-control" id="username" />
+                                    <label for="idUser" class="form-label">Usuario</label>
+                                    <input type="text" class="form-control" id="idUser" name="user" />
                                 </div>
                                 <div class="mb-4 px-2">
-                                    <label for="password" class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control" id="password" />
+                                    <label for="idContraseña" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="idContraseña" name="contraseña" />
                                 </div>
                                 <!-- <div class="mb-4">
                                     <input type="checkbox" class="form-check-input" id="remember" />

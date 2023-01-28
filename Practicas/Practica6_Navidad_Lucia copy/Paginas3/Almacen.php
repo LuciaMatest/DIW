@@ -1,8 +1,8 @@
 <?php
-// require('../Funciones/funcionesBD.php');
-// require('../Funciones/BD.php');
-// require('../Conexion/conexionBD.php');
-// session_start();
+session_start();
+require('../Funciones/Funciones.php');
+require('../Funciones/BD.php');
+require('../Conexion/conexionBD.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -27,31 +27,31 @@
                     <img src="../Imagen/logo.png" alt="logo" class="icono_logo" style="width: 200px;">
                 </a>
                 <?php
-                // if (estaValidado()) {
-                //     echo '<div class="p-0 p-sm-0 p-md-2">';
-                //     echo '<a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
-                //     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                //         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                //     </svg>
-                //     Carrito</a>';
-                //     echo '</div>';
-                //     echo '<div class="p-0 p-sm-0 p-md-2">';
-                //     echo '<a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
-                //     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                //         <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                //         <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                //     </svg>
-                //     Perfil</a>';
-                //     echo '</div>';
-                //     echo '<div class="p-0 p-sm-0 p-md-2">';
-                //     echo '<a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
-                //     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                //         <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
-                //         <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                //     </svg>
-                //     Cerrar Sesión</a>';
-                //     echo '</div>';
-                // } 
+                if (estaValidado()) {
+                    echo '<div class="p-0 p-sm-0 p-md-2">';
+                    echo '<a href="../Acciones/Carrito.php" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                    Carrito</a>';
+                    echo '</div>';
+                    echo '<div class="p-0 p-sm-0 p-md-2">';
+                    echo '<a href="../Paginas2/Perfil.php" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                    </svg>
+                    Perfil</a>';
+                    echo '</div>';
+                    echo '<div class="p-0 p-sm-0 p-md-2">';
+                    echo '<a href="../Acciones/Logout.php" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                    </svg>
+                    Cerrar Sesión</a>';
+                    echo '</div>';
+                }
                 ?>
             </div>
         </div>
@@ -68,21 +68,21 @@
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
                     <?php
-                    // if (estaValidado()) {
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Carrito</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a href="../Paginas2/Perfil.php" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Perfil</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Cerrar Sesión</a></li>';
-                    // }
+                    if (estaValidado()) {
+                        echo '<li class="opli nav-item p-3 p-md-0 fw-bold"><a href="../Acciones/Carrito.php" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Carrito</a></li>';
+                        echo '<li class="opli nav-item p-3 p-md-0 fw-bold"><a href="../Paginas2/Perfil.php" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Perfil</a></li>';
+                        echo '<li class="opli nav-item p-3 p-md-0 fw-bold"><a href="../Acciones/Logout.php" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Cerrar Sesión</a></li>';
+                    }
                     ?>
                     <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../index.php">Inicio</a></li>
                     <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../Paginas2/Tienda.php">Tienda</a></li>
                     <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Contacto</a></li>
                     <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Ofertas</a></li>
                     <?php
-                    // if (esAdmin() || esModerador()) {
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="./Albaran.php">Albarán</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="./Ventas.php">Ventas</a></li>';
-                    // }
+                    if (esAdmin() || esModerador()) {
+                        echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="Albaran.php">Albarán</a></li>';
+                        echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="Ventas.php">Ventas</a></li>';
+                    }
                     ?>
                 </ul>
             </div>
@@ -100,74 +100,74 @@
                     <th scope="col">Precio</th>
                     <th scope="col">Stock</th>
                     <?
-                    // if (esAdmin()) {
-                    //     echo '<th scope="col">Modificar</th>';
-                    // }
+                    if (esAdmin()) {
+                        echo '<th scope="col">Modificar</th>';
+                    }
                     ?>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <?php
-                    // try {
-                    //     $conexion = new PDO('mysql:host=' . $_SERVER['SERVER_ADDR'] . ';dbname=' . BBDD, USER, PASS);
-                    //     $sql = 'select * from ventas';
-                    //     $resultado = $conexion->query($sql);
-                    //     while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
-                    //         echo '<th scope="row">' . $row['cod_producto'] . '</th>';
-                    //         echo '<td>' . $row['nombre'] . '</td>';
-                    //         echo '<td>' . $row['descripcion'] . '</td>';
-                    //         echo '<td>' . $row['precio'] . '</td>';
-                    //         if (esAdmin() || esModerador()) {
-                    //             echo '<td>';
-                    //             echo '<form action="../Funciones/modificarBD.php">';
-                    //             echo '<p class="stock"> ' . $row['stock'] . ' </p>';
-                    //             echo '<input type="number" name="cantidad" size="2" value="1" class="w-25">';
-                    //             echo '<a href="../Funciones/modificarBD.php?opcion=modifica_ventas&clave=' . $key['id_ventas'] . '" style="color: #be901b;"> 
-                    //                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
-                    //                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                    //                         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                    //                     </svg>
-                    //                 </a>';
-                    //             echo '</form>';
-                    //             echo '</td>';
-                    //         }
-                    //         if (esAdmin()) {
-                    //             echo "<td>";
-                    //             echo '<a href="../Funciones/modificarBD.php?opcion=modifica_ventas&clave=' . $key['id_ventas'] . '" class="botonG"> 
-                    //                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                    //                         <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-                    //                     </svg>
-                    //                 </a>';
-                    //             echo "</td>";
-                    //         }
-                    //     }
-                    // } catch (Exception $ex) {
-                    //     if ($ex->getCode() == 2002) {
-                    //         echo '<span style="color:brown"> Fallo de conexión </span>';
-                    //     }
-                    //     if ($ex->getCode() == 1049) {
-                    //         echo '<span style="color:brown"> Base de datos desconocida </span>';
-                    //     }
-                    //     if ($ex->getCode() == 1045) {
-                    //         echo '<span style="color:brown"> Datos incorrectos </span>';
-                    //     }
-                    // } finally {
-                    //     unset($conexion);
-                    // }
+                    try {
+                        $conexion = new PDO('mysql:host=' . $_SERVER['SERVER_ADDR'] . ';dbname=' . BBDD, USER, PASS);
+                        $sql = 'select * from ventas';
+                        $resultado = $conexion->query($sql);
+                        while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
+                            echo '<th scope="row">' . $row['cod_producto'] . '</th>';
+                            echo '<td>' . $row['nombre'] . '</td>';
+                            echo '<td>' . $row['descripcion'] . '</td>';
+                            echo '<td>' . $row['precio'] . '</td>';
+                            if (esAdmin() || esModerador()) {
+                                echo '<td>';
+                                echo '<form action="../Funciones/modificarBD.php">';
+                                echo '<p class="stock"> ' . $row['stock'] . ' </p>';
+                                echo '<input type="number" name="cantidad" size="2" value="1" class="w-25">';
+                                echo '<a href="../Funciones/modificarBD.php?opcion=modifica_ventas&clave=' . $key['id_ventas'] . '" style="color: #be901b;"> 
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                        </svg>
+                                    </a>';
+                                echo '</form>';
+                                echo '</td>';
+                            }
+                            if (esAdmin()) {
+                                echo "<td>";
+                                echo '<a href="../Funciones/modificarBD.php?opcion=modifica_ventas&clave=' . $key['id_ventas'] . '" class="botonG"> 
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                        </svg>
+                                    </a>';
+                                echo "</td>";
+                            }
+                        }
+                    } catch (Exception $ex) {
+                        if ($ex->getCode() == 2002) {
+                            echo '<span style="color:brown"> Fallo de conexión </span>';
+                        }
+                        if ($ex->getCode() == 1049) {
+                            echo '<span style="color:brown"> Base de datos desconocida </span>';
+                        }
+                        if ($ex->getCode() == 1045) {
+                            echo '<span style="color:brown"> Datos incorrectos </span>';
+                        }
+                    } finally {
+                        unset($conexion);
+                    }
                     ?>
                 </tr>
             </tbody>
         </table>
         <?
-        // if (esAdmin()) {
-        //     echo '<a href="../Funciones/modificarBD.php?opcion=añadir_productos" style="color: #be901b;"> Añadir producto
-        //              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
-        //                  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-        //                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-        //              </svg>
-        //          </a>';
-        // }
+        if (esAdmin()) {
+            echo '<a href="../Funciones/modificarBD.php?opcion=añadir_productos" style="color: #be901b;"> Añadir producto
+                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                     </svg>
+                 </a>';
+        }
         ?>
     </main>
 

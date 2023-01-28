@@ -1,8 +1,7 @@
 <?php
-// require('../Funciones/funcionesBD.php');
-// require('../Funciones/BD.php');
-// require('../Conexion/conexionBD.php');
-// session_start();
+session_start();
+require('../Funciones/Funciones.php');
+require('../Conexion/BBDD.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -27,7 +26,7 @@
                     <img src="../Imagen/logo.png" alt="logo" class="icono_logo" style="width: 200px;">
                 </a>
                 <div class="p-0 p-sm-0 p-md-2">
-                    <a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
+                    <a href="../Acciones/Carrito.php" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
                             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                         </svg>
@@ -35,7 +34,7 @@
                     </a>
                 </div>
                 <div class="p-0 p-sm-0 p-md-2">
-                    <a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
+                    <a href="../Acciones/Logout.php" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
                             <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
@@ -58,26 +57,21 @@
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
                     <?php
-                    // if (estaValidado()) {
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Carrito</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Perfil</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a href="#" type="button" class="btn boton px-1 d-none d-sm-none d-md-block">Cerrar Sesión</a></li>';
-                    // } else {
-                    ?>
-                    <li class="opli nav-item p-3 p-md-0 fw-bold"><a href="Login.php" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Iniciar sesión</a></li>
-                    <?php
-                    // }
+                    if (estaValidado()) {
+                        echo '<li class="opli nav-item p-3 p-md-0 fw-bold"><a href="../Acciones/Carrito.php" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Carrito</a></li>';
+                        echo '<li class="opli nav-item p-3 p-md-0 fw-bold"><a href="../Acciones/Logout.php" type="button" class="btn boton px-1 d-block d-sm-block d-md-none">Cerrar Sesión</a></li>';
+                    }
                     ?>
                     <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../index.php">Inicio</a></li>
-                    <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Tienda</a></li>
+                    <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="Tienda.php">Tienda</a></li>
                     <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Contacto</a></li>
                     <li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Ofertas</a></li>
                     <?php
-                    // if (esAdmin() || esModerador()) {
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Almacén</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Albarán</a></li>';
-                    //     echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="#">Ventas</a></li>';
-                    // }
+                    if (esAdmin() || esModerador()) {
+                        echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../Paginas3/Almacen.php">Almacén</a></li>';
+                        echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../Paginas3/Albaran.php">Albarán</a></li>';
+                        echo '<li class="opli nav-item p-3 fw-bold"><a class="op btn nav-link" href="../Paginas3/Ventas.php">Ventas</a></li>';
+                    }
                     ?>
                 </ul>
             </div>
@@ -87,132 +81,126 @@
 
     <main class="pt-1">
         <?php
-        // if (guardarCambios()){
-        //     actualizarUsuario();
-        //     session_destroy();
-        //     validarUser($_REQUEST['user'],$_REQUEST['contraseña']);
-        //     echo "<h2>Perfil actualizado!</h2>";
-        //     echo "<a href='../index.php' class='botones'>Volver a inicio</a>";
-        // } else{
+        if (guardarCambios()) {
+            actualizarUsuario();
+            session_destroy();
+            validarUser($_REQUEST['user'], $_REQUEST['contraseña']);
+            echo "<h2>Perfil actualizado!</h2>";
+            echo "<a href='../index.php' class='botones'>Volver a inicio</a>";
+        } else {
         ?>
-        <div class="container">
-            <div class="row justify-content-center mt-5">
-                <div class="col-lg-5 col-md-9 col-sm-10">
-                    <h1 class="text-center fw-bold pb-3" style="color: #444;">Mi perfil</h1>
-                    <div class="card" style="background-color: #d4d4d4;border-style: none;">
-                        <div class="card-body pt-4">
-                            <form action="./Perfil.php" method="post">
-                                <div class="mb-4 px-2">
-                                    <label for="idUser" class="form-label">Usuario:</label>
-                                    <input type="text" class="form-control" name="user" id="user" readonly value="<?php echo $_SESSION["user"]; ?>">
-                                    <?
-                                    //comprobar que no este vacio y que cumple los requisitos, si lo está pongo un error
-                                    // if (enviado()) {
-                                    //     if (vacio("user")) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Introduce usuario</span> -->
-                                    <?
-                                    //     }
-                                    // }
-                                    ?>
-                                </div>
-                                <div class="mb-4 px-2">
-                                    <label for="idNombre" class="form-label">Nombre:</label>
-                                    <input type="text" class="form-control" name="nombre" id="idNombre" value="<?php echo $_SESSION["nombre"]; ?>">
-                                    <?
-                                    //comprobar que no este vacio y que cumple los requisitos, si lo está pongo un error
-                                    // if (enviado()) {
-                                    //     if (vacio("nombre")) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Introduce nombre</span> -->
-                                    <?
-                                    //     }
-                                    // }
-                                    ?>
-                                </div>
-                                <div class="mb-4 px-2">
-                                    <label for="idContraseña" class="form-label">Contraseña:</label>
-                                    <input type="password" class="form-control" name="contraseña" id="contraseña" value="<?php echo $_SESSION["contraseña"]; ?>">
-                                    <?
-                                    //comprobar que no este vacio y valido, si lo está pongo un error
-                                    // if (enviado()) {
-                                    //     if (vacio("contraseña")) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Introduce contraseña</span> -->
-                                    <?
-                                    // } elseif (!patronContraseña()) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Contraseña no válida, revise</span> -->
-                                    <?
-                                    //     }
-                                    // }
-                                    ?>
-                                </div>
-                                <div class="mb-4 px-2">
-                                    <label for="idEmail" class="form-label">Email:</label>
-                                    <input type="email" class="form-control" name="email" id="idEmail" value="<?php echo $_SESSION["email"]; ?>">
-                                    <?
-                                    //comprobar que no este vacio y valido, si lo está pongo un error
-                                    // if (enviado()) {
-                                    //     if (vacio("email")) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Introduce email</span> -->
-                                    <?
-                                    // } elseif (!patronEmail()) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Email no válida, revise</span> -->
-                                    <?
-                                    //     }
-                                    // }
-                                    ?>
-                                </div>
-                                <div class="mb-4 px-2">
-                                    <label for="idFecha" class="form-label">Fecha de nacimiento:</label>
-                                    <input type="text" class="form-control" name="fecha" id="fecha" placeholder="dd/mm/aaaa" value="<?php echo $_SESSION["fecha"]; ?>">
-                                    <?
-                                    //comprobar que no este vacio, que sea fecha correcta y si lo está pongo un error
-                                    // if (enviado()) {
-                                    //     if (vacio("fecha")) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Introduce fecha</span> -->
-                                    <?
-                                    // } elseif (!patronFecha()) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Fecha no válida, revise</span> -->
-                                    <?
-                                    //     }
-                                    // }
-                                    ?>
-                                </div>
-                                <div class="mb-4 px-2">
-                                    <label for="idOpcion">Rol:</label>
-                                    <select name="rol" id="idOpcion" class="w-100 d-inline-block bg-white" style="box-sizing: border-box;border-radius: 4px;border: 1px solid #ccc;padding: 12px 20px;margin: 8px 0;">
-                                        <option value="0">Seleccione una opción</option>
-                                        <option value="ADM01">Administrador</option>
-                                        <option value="M0001">Moderador</option>
-                                        <option value="U0001">Usuario normal</option>
-                                    </select>
-                                    <?php
-                                    //Comprobar si existe
-                                    // if (existe('rol') && $_REQUEST['rol'] == 0) {
-                                    ?>
-                                    <!-- <span style="color:brown"> Introduce un rol</span> -->
-                                    <?
-                                    // }
-                                    ?>
-                                </div>
-                                <div class="text-center">
-                                    <input type="submit" value="Guardar cambios" name="enviar" class="botonG">
-                                    <a href="Login.php" class="ps-3"> Volver</a>
-                                </div>
-                            </form>
+            <div class="container">
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-5 col-md-9 col-sm-10">
+                        <h1 class="text-center fw-bold pb-3" style="color: #444;">Mi perfil</h1>
+                        <div class="card" style="background-color: #d4d4d4;border-style: none;">
+                            <div class="card-body pt-4">
+                                <form action="./Perfil.php" method="post">
+                                    <div class="mb-4 px-2">
+                                        <label for="idUser" class="form-label">Usuario:</label>
+                                        <input type="text" class="form-control" name="user" id="user" readonly value="<?php echo $_SESSION["user"]; ?>">
+                                        <?
+                                        if (enviado()) {
+                                            if (vacio("user")) {
+                                        ?>
+                                                <span style="color:brown"> Introduce usuario</span>
+                                        <?
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                    <div class="mb-4 px-2">
+                                        <label for="idNombre" class="form-label">Nombre:</label>
+                                        <input type="text" class="form-control" name="nombre" id="idNombre" value="<?php echo $_SESSION["nombre"]; ?>">
+                                        <?
+                                        if (enviado()) {
+                                            if (vacio("nombre")) {
+                                        ?>
+                                                <span style="color:brown"> Introduce nombre</span>
+                                        <?
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                    <div class="mb-4 px-2">
+                                        <label for="idContraseña" class="form-label">Contraseña:</label>
+                                        <input type="password" class="form-control" name="contraseña" id="contraseña" value="<?php echo $_SESSION["contraseña"]; ?>">
+                                        <?
+                                        if (enviado()) {
+                                            if (vacio("contraseña")) {
+                                        ?>
+                                                <span style="color:brown"> Introduce contraseña</span>
+                                            <?
+                                            } elseif (!patronContraseña()) {
+                                            ?>
+                                                <span style="color:brown"> Contraseña no válida, revise</span>
+                                        <?
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                    <div class="mb-4 px-2">
+                                        <label for="idEmail" class="form-label">Email:</label>
+                                        <input type="email" class="form-control" name="email" id="idEmail" value="<?php echo $_SESSION["email"]; ?>">
+                                        <?
+                                        if (enviado()) {
+                                            if (vacio("email")) {
+                                        ?>
+                                                <span style="color:brown"> Introduce email</span>
+                                            <?
+                                            } elseif (!patronEmail()) {
+                                            ?>
+                                                <span style="color:brown"> Email no válida, revise</span>
+                                        <?
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                    <div class="mb-4 px-2">
+                                        <label for="idFecha" class="form-label">Fecha de nacimiento:</label>
+                                        <input type="text" class="form-control" name="fecha" id="fecha" placeholder="dd/mm/aaaa" value="<?php echo $_SESSION["fecha"]; ?>">
+                                        <?
+                                        if (enviado()) {
+                                            if (vacio("fecha")) {
+                                        ?>
+                                                <span style="color:brown"> Introduce fecha</span>
+                                            <?
+                                            } elseif (!patronFecha()) {
+                                            ?>
+                                                <span style="color:brown"> Fecha no válida, revise</span>
+                                        <?
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                    <div class="mb-4 px-2">
+                                        <label for="idOpcion">Rol:</label>
+                                        <select name="rol" id="idOpcion" class="w-100 d-inline-block bg-white" style="box-sizing: border-box;border-radius: 4px;border: 1px solid #ccc;padding: 12px 20px;margin: 8px 0;">
+                                            <option value="0">Seleccione una opción</option>
+                                            <option value="ADM01">Administrador</option>
+                                            <option value="M0001">Moderador</option>
+                                            <option value="U0001">Usuario normal</option>
+                                        </select>
+                                        <?php
+                                        if (existe('rol') && $_REQUEST['rol'] == 0) {
+                                        ?>
+                                            <span style="color:brown"> Introduce un rol</span>
+                                        <?
+                                        }
+                                        ?>
+                                    </div>
+                                    <div class="text-center">
+                                        <input type="submit" value="Guardar cambios" name="enviar" class="botonG">
+                                        <a href="../index.php" class="ps-3"> Volver</a>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         <?php
-        // }
+        }
         ?>
     </main>
 
@@ -225,10 +213,10 @@
         </footer>
     </div>
     <?php
-    // if (isset($_SESSION['error'])) {
-    //     echo $_SESSION['error'];
-    // }
-    // unset($_SESSION['error']);
+    if (isset($_SESSION['error'])) {
+        echo $_SESSION['error'];
+    }
+    unset($_SESSION['error']);
     ?>
 </body>
 
