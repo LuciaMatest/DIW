@@ -180,7 +180,6 @@ require('../Funciones/Funciones.php');
                                             <option value="ADM01">Administrador</option>
                                             <option value="M0001">Moderador</option>
                                             <option value="U0001">Usuario normal</option>
-                                            <option value="U0002">Usuario normal2</option>
                                         </select>
                                         <?php
                                         if (existe('rol') && $_REQUEST['rol'] == 0) {

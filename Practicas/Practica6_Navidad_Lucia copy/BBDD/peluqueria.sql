@@ -30,7 +30,6 @@ CREATE TABLE productos (
 insert into roles (codigo, descripcion) values ('ADM01','Administrador');
 insert into roles (codigo, descripcion) values ('M0001','Moderador');
 insert into roles (codigo, descripcion) values ('U0001','Usuario');
-insert into roles (codigo, descripcion) values ('U0002','Usuario2');
 
 insert into usuarios (usuario, clave, nombre, correo, fecha, rol) values ('Lulu','361c2042f695b5f3d30ee3ec0429750df6279a04','Lucia123','lucia@correo.com', '1994-10-11', 'ADM01');
 insert into usuarios (usuario, clave, nombre, correo, fecha, rol) values ('Mod1','d2556a84b8b33416e0475cb7346fd65682bde4b6','Mod123','mod1@correo.com', '2015-09-14', 'M0001');
