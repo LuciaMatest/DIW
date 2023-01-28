@@ -78,7 +78,7 @@
                     if ($key['cod_producto']==$_REQUEST['cod_producto']){
                         echo "<article>";
                             echo '<div class="detalles">';
-                                echo '<img src="../'.$key['imagen_alta'].'" alt="productos_pelu">';
+                                echo '<img src="../imagen/'.$key['imagen_alta'].'" alt="productos_pelu">';
                                 echo '<div class="informacion">';
                                     echo '<h3>'. $key['nombre']. '</h3>';
                                     echo '<p class="precio"><b>'.$key['precio'].'€</b></p>';
