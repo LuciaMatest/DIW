@@ -1,7 +1,6 @@
 <?php
 session_start();
 require('../Funciones/Funciones.php');
-require('../Conexion/conexionBD.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -75,7 +74,7 @@ require('../Conexion/conexionBD.php');
                                         ?>
                                                 <span style="color:brown"> Introduce usuario</span>
                                             <?
-                                            } elseif (!validarUsuario()) {
+                                            } elseif (!usuarioValidado()) {
                                             ?>
                                                 <span style="color:brown"> Usuario ya registrado, revise</span>
                                         <?
@@ -181,6 +180,7 @@ require('../Conexion/conexionBD.php');
                                             <option value="ADM01">Administrador</option>
                                             <option value="M0001">Moderador</option>
                                             <option value="U0001">Usuario normal</option>
+                                            <option value="U0002">Usuario normal2</option>
                                         </select>
                                         <?php
                                         if (existe('rol') && $_REQUEST['rol'] == 0) {
@@ -213,12 +213,5 @@ require('../Conexion/conexionBD.php');
             </ul>
         </footer>
     </div>
-    <?php
-    if (isset($_SESSION['error'])) {
-        echo $_SESSION['error'];
-    }
-    unset($_SESSION['error']);
-    ?>
 </body>
-
 </html>

@@ -66,7 +66,7 @@ function existe($nombre)
 }
 
 //Patrones
-function validarUsuario()
+function usuarioValidado()
 {
     if (validaUsuario($_REQUEST['user'])) {
         return true;
@@ -118,7 +118,7 @@ function patronFoto()
 function verificar()
 {
     if (enviado()) {
-        if (!vacio('user') && validarUsuario()) {
+        if (!vacio('user') && usuarioValidado()) {
             if (!vacio("contraseña") && !vacio('contraseña2') && patronContraseña() && $_REQUEST['contraseña'] == $_REQUEST['contraseña2']) {
                 if (!vacio('nombre')) {
                     if (!vacio('email') && patronEmail()) {
