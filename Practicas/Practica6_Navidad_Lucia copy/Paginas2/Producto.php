@@ -141,14 +141,17 @@ require('../Conexion/BBDD.php');
                         echo '<p class="precio py-1" style="color: #444;font-size: 45px;"><b>' . $key['precio'] . '€</b></p>';
                         echo '<p class="py-1"><b>Cod.' . $key['cod_producto'] . '</b>: ' . $key['descripcion'] . '</p>';
                         echo '<p class="unidad">Unidades:</p>';
-                        echo '<form action="./carrito.php">';
+                        echo '<form action="../Acciones/Carrito.php">';
                         echo '<input type="number" class="contar" name="cantidad" value="1" title="Cantidad" size="4" min="1" max="" step="1" inputmode="numeric" autocomplete="off">';
                         if (estaValidado()) {
-                            echo '<a href="./Producto.php" class="botonG">Comprar
+                            echo '<button type="submit" name="comprar" class="botonG">Comprar
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
                                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                                     </svg>
-                                </a>';
+                                    </button>';
+                            if ($key['stock'] == 0) {
+                                echo ' disabled';
+                            }
                         } else {
                             echo '<a href="../Paginas1/Login.php" class="botonG">Comprar
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
