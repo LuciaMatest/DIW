@@ -151,8 +151,8 @@ function actualizarProducto()
 {
     try {
         $conexion = new PDO('mysql:host=' . $_SERVER['SERVER_ADDR'] . ';dbname=' . BBDD, USER, PASS);
-        $actualiza1 = "update productos set precio='" . (float)$_REQUEST['precio'] . "' where cod_producto='" . $_REQUEST['cod_producto'] . "';";
-        $actualiza2 = "update productos set descripcion='" . $_REQUEST['descripcion'] . "' where cod_producto='" . $_REQUEST['cod_producto'] . "';";
+        $actualiza1 = "update productos set precio='" . (float)$_REQUEST['precio'] . "' where cod_producto='" . $_REQUEST['id'] . "';";
+        $actualiza2 = "update productos set descripcion='" . $_REQUEST['descripcion'] . "' where cod_producto='" . $_REQUEST['id'] . "';";
 
         $sql_preparada1 = $conexion->prepare($actualiza1);
         $sql_preparada2 = $conexion->prepare($actualiza2);
@@ -169,8 +169,8 @@ function actualizarAlbaran()
 {
     try {
         $conexion = new PDO('mysql:host=' . $_SERVER['SERVER_ADDR'] . ';dbname=' . BBDD, USER, PASS);
-        $actualiza1 = "update albaran set fecha_albaran='" . $_REQUEST['fecha_albaran'] . "' where id_albaran='" . $_REQUEST['id_albaran'] . "';";
-        $actualiza2 = "update albaran set cantidad='" . (int)$_REQUEST['cantidad'] . "' where id_albaran='" . $_REQUEST['id_albaran'] . "';";
+        $actualiza1 = "update albaran set fecha_albaran='" . $_REQUEST['fecha_albaran'] . "' where id_albaran='" . $_REQUEST['id'] . "';";
+        $actualiza2 = "update albaran set cantidad='" . (int)$_REQUEST['cantidad'] . "' where id_albaran='" . $_REQUEST['id'] . "';";
 
         $sql_preparada1 = $conexion->prepare($actualiza1);
         $sql_preparada2 = $conexion->prepare($actualiza2);

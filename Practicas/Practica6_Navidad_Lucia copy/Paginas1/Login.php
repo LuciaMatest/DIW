@@ -1,5 +1,6 @@
 <?php
-// session_start();
+session_start();
+require('../Funciones/Funciones.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -55,7 +56,7 @@
                             <h2 class="px-3 pt-4 fw-bold" style="color: #555;">Acceder</h2>
                         </div>
                         <div class="card-body pt-0">
-                            <form action="../Funciones/valida.php" method="post">
+                            <form action="../Funciones/Validaciones.php" method="post">
                                 <div class="mb-4 px-2">
                                     <label for="username" class="form-label">Usuario</label>
                                     <input type="text" class="form-control" id="username" />
@@ -89,10 +90,10 @@
         </footer>
     </div>
     <?php
-    // if (isset($_SESSION['error'])) {
-    //     echo $_SESSION['error'];
-    // }
-    // unset($_SESSION['error']);
+    if (isset($_SESSION['error'])) {
+        echo $_SESSION['error'];
+    }
+    unset($_SESSION['error']);
     ?>
 </body>
 
