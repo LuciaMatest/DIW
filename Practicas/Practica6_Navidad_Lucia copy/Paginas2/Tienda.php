@@ -1,6 +1,5 @@
 <?php
 session_start();
-// require("../Conexion/conexionBD.php");
 require("../Conexion/BBDD.php");
 require("../Funciones/Funciones.php");
 ?>

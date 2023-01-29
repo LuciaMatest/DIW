@@ -12,7 +12,6 @@ function validarUser($user, $pass)
         $array = array($user, $pass_encriptada);
         $sql_preparada->execute($array);
         if ($sql_preparada->rowCount() == 1) {
-            session_start();
             $_SESSION['validado'] = true;
             $row = $sql_preparada->fetch();
             $_SESSION['user'] = $user;

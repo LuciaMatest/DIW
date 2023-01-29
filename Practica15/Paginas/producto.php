@@ -92,7 +92,6 @@
         </header>
     
     <div class="ordenar">
-        
         <main>            
             <section class="d-flex justify-content-center">
                 <form action="./carrito.php">

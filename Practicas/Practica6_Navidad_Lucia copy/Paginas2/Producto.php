@@ -125,54 +125,87 @@ require('../Conexion/BBDD.php');
         </div>
     </nav>
 
-    <main class="py-5">
+    <!-- <main class="py-5">
         <div class="container">
             <div class="row mb-2">
                 <?
-                foreach ($array_productos as $key) {
-                    if ($key['cod_producto'] == $_REQUEST['cod_producto']) {
-                        echo '<div class="col-md-12">';
-                        echo '<div class="row g-0 rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative">';
-                        echo '<div class="col-12 col-sm-12 col-md-4 col-lg-4 d-block d-lg-block">';
-                        echo '<img src="../Imagen/' . $key['imagen_alta'] . '" alt="productos_pelu">';
-                        echo '</div>';
-                        echo '<div class="col-12 col-sm-12 col-md-8 col-lg-8 p-4 d-flex flex-column position-static">';
-                        echo '<h3 class="fw-bold my-1 w-100 mb-1" style="color: #303030;font-size: 18px; text-transform: uppercase;line-height: 30px;">' . $key['nombre'] . '</h3>';
-                        echo '<p class="precio py-1" style="color: #444;font-size: 45px;"><b>' . $key['precio'] . '€</b></p>';
-                        echo '<p class="py-1"><b>Cod.' . $key['cod_producto'] . '</b>: ' . $key['descripcion'] . '</p>';
-                        echo '<p class="unidad">Unidades:</p>';
-                        echo '<form action="../Acciones/Carrito.php">';
-                        echo '<input type="number" class="contar" name="cantidad" value="1" title="Cantidad" size="4" min="1" max="" step="1" inputmode="numeric" autocomplete="off">';
-                        if (estaValidado()) {
-                            echo '<button type="submit" name="comprar" class="botonG">Comprar
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                                    </svg>
-                                    </button>';
-                            if ($key['stock'] == 0) {
-                                echo ' disabled';
-                            }
-                        } else {
-                            echo '<a href="../Paginas1/Login.php" class="botonG">Comprar
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                                    </svg>
-                                </a>';
-                        }
-                        echo '<p class="stock px-5 py-3" style="color: rgb(116, 116, 116);">Stock: ' . $key['stock'] . ' disponibles</p>';
-                        echo '<input type="hidden" name="cod_producto" value="' . $key['cod_producto'] . '">';
-                        echo '<input type="hidden" name="precio" value="' . $key['precio'] . '">';
-                        echo '<input type="hidden" name="stock" value="' . $key['stock'] . '">';
-                        echo '</form>';
-                        echo '</div>';
-                        echo '</div>';
-                        echo '</div>';
-                    }
-                }
+                // foreach ($array_productos as $key) {
+                //     if ($key['cod_producto'] == $_REQUEST['cod_producto']) {
+                //         echo '<div class="col-md-12">';
+                //         echo '<div class="row g-0 rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative">';
+                //         echo '<div class="col-12 col-sm-12 col-md-4 col-lg-4 d-block d-lg-block">';
+                //         echo '<img src="../Imagen/' . $key['imagen_alta'] . '" alt="productos_pelu">';
+                //         echo '</div>';
+                //         echo '<div class="col-12 col-sm-12 col-md-8 col-lg-8 p-4 d-flex flex-column position-static">';
+                //         echo '<h3 class="fw-bold my-1 w-100 mb-1" style="color: #303030;font-size: 18px; text-transform: uppercase;line-height: 30px;">' . $key['nombre'] . '</h3>';
+                //         echo '<p class="precio py-1" style="color: #444;font-size: 45px;"><b>' . $key['precio'] . '€</b></p>';
+                //         echo '<p class="py-1"><b>Cod.' . $key['cod_producto'] . '</b>: ' . $key['descripcion'] . '</p>';
+                //         echo '<p class="unidad">Unidades:</p>';
+                //         echo '<form action="../Acciones/Carrito.php">';
+                //         echo '<input type="number" class="contar" name="cantidad" value="1" title="Cantidad" size="4" min="1" max="" step="1" inputmode="numeric" autocomplete="off">';
+                //         if (estaValidado()) {
+                //             echo '<button type="submit" name="comprar" class="botonG">Comprar 
+                //                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                //                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                //                     </svg>
+                //                     </button>';
+                //         } else {
+                //             echo '<a href="../Paginas1/Login.php" class="botonG">Comprar 
+                //                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                //                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                //                     </svg>
+                //                 </a>';
+                //         }
+                //         echo '<p class="stock px-5 py-3" style="color: rgb(116, 116, 116);">Stock: ' . $key['stock'] . ' disponibles</p>';
+                //         echo '<input type="hidden" name="cod_producto" value="' . $key['cod_producto'] . '">';
+                //         echo '<input type="hidden" name="precio" value="' . $key['precio'] . '">';
+                //         echo '<input type="hidden" name="stock" value="' . $key['stock'] . '">';
+                //         echo '</form>';
+                //         echo '</div>';
+                //         echo '</div>';
+                //         echo '</div>';
+                //     }
+                // }
                 ?>
             </div>
         </div>
-    </main>
+    </main> -->
+
+    <div class="ordenar">
+        <main>
+            <section class="d-flex justify-content-center">
+                <form action="./carrito.php">
+                    <?
+                    foreach ($array_productos as $jamon) {
+                        if ($jamon['cod_producto'] == $_REQUEST['cod_producto']) {
+                            echo "<article>";
+                            echo '<img src="../Imagen/' . $jamon['imagen_alta'] . '" alt="fotoJamón">';
+                            echo '<h3>' . $jamon['nombre'] . '</h3>';
+                            echo '<p>Descripcion: ' . $jamon['descripcion'] . '</p>';
+                            echo '<p>Precio: ' . $jamon['precio'] . '€</p>';
+                            echo '<p>Quedan: ' . $jamon['stock'] . ' disponibles</p>';
+                            echo '<select name="cantidad" id="idSelector" class="form-select form-select-sm">';
+                            for ($i = 1; $i <= $jamon['stock']; $i++) {
+                                echo '<option value="' . $i . '">' . $i . '</option>';
+                            }
+                            echo '</select><br>';
+                            echo '<input type="hidden" name="id" value="' . $jamon['cod_producto'] . '">';
+                            echo '<input type="hidden" name="precio" value="' . $jamon['precio'] . '">';
+                            echo '<input type="hidden" name="stock" value="' . $jamon['stock'] . '">';
+                            echo '<input type="submit" name="comprar" class="botonG" value="COMPRAR YA"';
+                            if ($jamon['stock'] == 0) {
+                                echo ' disabled';
+                            }
+                            echo '>';
+                            echo "</article>";
+                        }
+                    }
+
+                    ?>
+                </form>
+            </section>
+        </main>
+    </div>
 
     <div class="container">
         <footer class="fixed-bottom" style="background-color: #d4d4d4;">

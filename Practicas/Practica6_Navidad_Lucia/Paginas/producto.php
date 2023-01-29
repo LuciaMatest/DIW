@@ -96,11 +96,7 @@
                                     echo '<input type="hidden" name="stock" value="'.$key['stock'].'">'; 
                                     echo '</form>';
                                 echo '</div>';
-                            echo '</div>';
-                            echo '<div class="descripcion">';
-                                echo '<h3>'. $key['nombre']. '</h3>';
-                                echo '<p><b>Cod.'. $key['cod_producto']. '</b>: ' . $key['descripcion']. '</p>';
-                            echo '</div>';                      
+                            echo '</div>';                     
                         echo "</article>"; 
                     }
                 }
