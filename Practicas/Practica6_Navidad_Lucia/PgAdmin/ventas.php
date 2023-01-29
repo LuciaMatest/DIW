@@ -116,7 +116,8 @@ require('../Funciones/BD.php');
                         $resultado = $conexion->query($sql);
                         //Recorremos la tabla para ir incorporando cada dato a la tabla en el lugar correspondiente
                         while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
-                            echo '<td scope="row">' . $row['id_ventas'] . '</td>';
+                            echo '<tr>';
+                            echo '<th scope="row">' . $row['id_ventas'] . '</th>';
                             echo '<td>' . $row['usuario_ventas'] . '</td>';
                             echo '<td>' . $row['fecha_compra'] . '</td>';
                             echo '<td>' . $row['cod_producto'] . '</td>';
@@ -138,6 +139,7 @@ require('../Funciones/BD.php');
                                     </a>';
                                 echo "</td>";
                             }
+                            echo '</tr>';
                         }
                     } catch (Exception $ex) {
                         if ($ex->getCode() == 2002) {
