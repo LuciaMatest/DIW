@@ -1,4 +1,3 @@
-
 $("button").click(function() {
     //variable valor del boton pulsado
     let valor = $(this).val();
@@ -17,3 +16,18 @@ $("button").click(function() {
         
     }
 })
+
+// $(document).ready(function () {
+//     $("#uno").click(function () {
+//         $("#resultado").val();
+//     });
+//     $("#dos").click(function () {
+//         $("#resultado").val();
+//     });
+//     $("#tres").click(function () {
+//         $("#resultado").val();
+//     });
+//     $("#cuatro").click(function () {
+//         $("#resultado").val();
+//     });
+// });
