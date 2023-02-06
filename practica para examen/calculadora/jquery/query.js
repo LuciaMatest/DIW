@@ -7,11 +7,13 @@ $("button").click(function() {
     //Si se pulsa C reseteamos la pantalla
     if (valor == "C") {
       $("#resultado").val("");
+    //Si pulsamos = nos muestra el resultado de la operación
+    } else if (valor == "=") {
+        //eval() evalúa o ejecuta un argumento.
+        $("#resultado").val(eval(actual));
     } else {
-      if (valor == "=") {
-        $("#resultado").val(eval(valor));
-      } else {
+        //Si no pulsamos ninguno de los dos botones anteriores simplemente se mostrara los botone que hemos pulsado
         $("#resultado").val(actual + valor);
-      }
+        
     }
 })
