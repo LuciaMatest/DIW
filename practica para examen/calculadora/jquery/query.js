@@ -1,33 +1,19 @@
-$("button").click(function() {
-    //variable valor del boton pulsado
-    let valor = $(this).val();
-    //variable valor de la pantalla
-    let actual = $("#resultado").val();
-    //Si se pulsa C reseteamos la pantalla
-    if (valor == "C") {
-      $("#resultado").val("");
-    //Si pulsamos = nos muestra el resultado de la operación
-    } else if (valor == "=") {
-        //eval() evalúa o ejecuta un argumento.
-        $("#resultado").val(eval(actual));
-    } else {
-        //Si no pulsamos ninguno de los dos botones anteriores simplemente se mostrara los botone que hemos pulsado
-        $("#resultado").val(actual + valor);
-        
-    }
-})
-
-// $(document).ready(function () {
-//     $("#uno").click(function () {
-//         $("#resultado").val();
-//     });
-//     $("#dos").click(function () {
-//         $("#resultado").val();
-//     });
-//     $("#tres").click(function () {
-//         $("#resultado").val();
-//     });
-//     $("#cuatro").click(function () {
-//         $("#resultado").val();
-//     });
-// });
+$(document).ready(function () {
+    $("button").click(function() {
+        //variable valor del boton pulsado
+        let valor = $(this).val();
+        //variable valor de la pantalla
+        let actual = $("#resultado").val();
+        //Si se pulsa C reseteamos la pantalla
+        if (valor == "C") {
+        $("#resultado").val("");
+        //Si pulsamos = nos muestra el resultado de la operación
+        } else if (valor == "=") {
+            //eval() evalúa o ejecuta un argumento.
+            $("#resultado").val(eval(actual));
+        } else {
+            //Si no pulsamos ninguno de los dos botones anteriores simplemente se mostrara los botone que hemos pulsado
+            $("#resultado").val(actual + valor);
+        }
+    });
+});
