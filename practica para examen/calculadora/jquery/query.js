@@ -1,3 +1,7 @@
+let operandoa;
+let operandob;
+let operacion;
+
 $(document).ready(function(){
     $('#uno').click(function () {
         $('#resultado').append('1');
@@ -29,6 +33,9 @@ $(document).ready(function(){
     $('#cero').click(function () {
         $('#resultado').append('0');
     });
+    $('#suma').click(function () {
+        
+    })
 });
 
 // $(document).ready(function(){
