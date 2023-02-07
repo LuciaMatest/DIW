@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+}
+
+
+header {
+    background-color: darkred;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    margin-left: 20px;
+    margin: 10px;
+    flex: 20%;
+}
+
+.barra {
+    flex: 50%;
+}
+
+.buscador {
+    background-color: rgb(236, 236, 236);
+    width: 80%;
+    border: 0;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-weight: 500;
+}
+
+nav {
+    float: right;
+    width: 100%;
+    flex: 30%;
+}
+
+nav div {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav div div {
+    float: left;
+    position: relative;
+}
+
+nav div div a {
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    color: white;
+    text-decoration: none;
+}
+
+nav div div a:hover {
+    background-color: #d80303;
+    color: #ffffff;
+}
+
+.nav-submenu {
+    width: auto;
+    position: absolute;
+    border: 1px solid lightgray;
+    background-color: #b10000;
+    width: auto;
+}
+
+.nav-submenu div {
+    width: 100%;
+    white-space: nowrap;
+}
+
+body {
+    background-color: lavender;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.formulario {
+    position: relative;
+    background-color: white;
+    width: 600px;
+    border-radius: 4px;
+    margin: 100px auto 10px;
+    overflow: hidden;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.formulario_login {
+    margin-bottom: 5px;
+}
+
+.formulario_logout {
+    margin-top: 30px;
+    border-top: 3px solid darkred;
+}
+
+h1 {
+    text-align: center;
+    color: darkred;
+}
+
+.login,
+.logout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 20px;
+}
+
+.login label,
+.logout label {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.login input,
+.logout input {
+    outline: none;
+    display: block;
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-weight: 500;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 15px 30px;
+    border: 0;
+    border-radius: 5px;
+    background-color: darkred;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
+button:hover {
+    background-color: #b10000;
+}
+
+.nav-submenu {
+    display: none;
+}
+
+nav .nav-menu div:hover>.nav-submenu {
+    display: block;
+}
