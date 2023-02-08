@@ -6,6 +6,11 @@ $(document).ready(function () {
     $('img').mouseover(function () { 
         $('p').fadeToggle();
     });
+
+    $('#guardarFormulario').click(function(evento){
+        evento.preventDefault();
+        alert(`Bienvenido/a ${$('#idNombre').val()} ${$('#idApellido').val()} tus estudios actuales son: ${$('#idEstudios').val()}.`)
+    })
 });
 
 // Funciones de video
