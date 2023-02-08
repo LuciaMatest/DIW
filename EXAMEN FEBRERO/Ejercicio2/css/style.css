@@ -85,8 +85,8 @@ img.ordenador:hover {
 }
 
 button {
-    padding: 20px;
-    background-color: dimgrey;
+    padding: 10px;
+    background-color: lightgrey;
     border-radius: 20%;
     border: white;
 }
