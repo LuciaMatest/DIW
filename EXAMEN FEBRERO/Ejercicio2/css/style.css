@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-html {
+body {
     background-color: white;
 }
 
@@ -43,6 +43,10 @@ nav div div a:hover {
 .login {
     color: white;
     padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
 }
 
 #submenu {

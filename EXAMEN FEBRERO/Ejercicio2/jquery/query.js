@@ -3,15 +3,26 @@ $(document).ready(function () {
         $('#submenu').slideToggle("slow");
     });
 
-    $('img').mouseover(function () { 
-        $('p').fadeToggle();
+    $('img').mouseleave(function () { 
+        $('p').fadeIn();
+    });
+
+    $('img').mouseenter(function () { 
+        $('p').fadeOut();
     });
 
     $('#guardarFormulario').click(function(evento){
         evento.preventDefault();
         alert(`Bienvenido/a ${$('#idNombre').val()} ${$('#idApellido').val()} tus estudios actuales son: ${$('#idEstudios').val()}.`)
     })
+
+    // $('#icono').on({        
+    //     mouseenter: function() { $(this).attr('class', 'bi bi-person'); },
+    //     mouseleave: function() { $(this).attr('src', 'bi bi-person-fill'); }
+    // });
 });
+
+
 
 // Funciones de video
 //Play
