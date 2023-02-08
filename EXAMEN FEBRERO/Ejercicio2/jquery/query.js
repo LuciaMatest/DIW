@@ -2,6 +2,11 @@ $(document).ready(function () {
     $('#menu').click(function () { 
         $('#submenu').slideToggle("slow");
     });
+
+    $('img').mouseover(function () { 
+        
+        $('p').fadeToggle();
+    });
 });
 
 // Funciones de video

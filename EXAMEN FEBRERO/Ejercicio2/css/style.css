@@ -77,12 +77,8 @@ img.ordenador {
     display: block;
     margin: auto;
     padding: 20px;
-    transition: 1s linear;
 }
 
-img.ordenador:hover {
-    transform: scale(1.1);
-}
 
 button {
     padding: 10px;
