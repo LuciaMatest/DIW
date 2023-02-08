@@ -83,3 +83,14 @@ img.ordenador {
 img.ordenador:hover {
     transform: scale(1.1);
 }
+
+button {
+    padding: 20px;
+    background-color: dimgrey;
+    border-radius: 20%;
+    border: white;
+}
+
+button:hover {
+    background-color: gray;
+}
