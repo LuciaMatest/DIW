@@ -4,7 +4,6 @@ $(document).ready(function () {
     });
 
     $('img').mouseover(function () { 
-        
         $('p').fadeToggle();
     });
 });
