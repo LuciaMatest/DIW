@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Enlaces sin subrayado ni color azul */
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    min-height: 90px;
+    background-color: rgb(226, 226, 226);
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.icono_logo {
+    height: 65px;
+}
+
+/* Barra de navegación */
+.navegador a {
+    padding-right: 10px;
+    font-weight: 200;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Cuando el raton pasa por encima */
+.navegador :hover {
+    color: dimgray;
+}
+
+/* Principal */
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+}
+
+main a div {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding-inline-start: 90px;
+    padding-inline-end: 90px;
+}
+
+main div img {
+    height: 400px;
+    border-radius: 8px;
+}
+
+main div .rectangulo {
+    position: absolute;
+    top: 330px;
+    left: 90px;
+    width: 400px;
+    height: 70px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: #008573;
+    background: linear-gradient(360deg, rgba(0, 133, 115, 1) 60%, rgba(254, 254, 254, 0) 100%);
+}
+
+.rectangulo h2 {
+    color: white;
+    margin-top: 25px;
+}
+
+main a {
+    transition: transform .5s;
+}
+
+/* Cuando el raton pasa por encima */
+main a:hover {
+    opacity: 0.7;
+    transform: scale(1.2);
+}
+
+/* Pie de página */
+footer {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    background: #dd524f;
+    color: white;
+    height: 45px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 150px;
+    padding-right: 30px;
+    justify-content: space-between;
+    font-size: smaller;
+}
+
+footer .enlaces a {
+    color: white;
+}
+
+footer .enlaces a img {
+    width: 5px;
+}
+
+footer .enlaces a {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Cuando el raton pasa por encima */
+footer .enlaces :hover {
+    color: rgb(100, 0, 0);
+}
+
+footer .redes i {
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Cuando el raton pasa por encima */
+footer .redes i:hover {
+    color: rgb(100, 0, 0);
+}
+
+/* Adaptación de tamaños */
+
+
+/* @media only screen and (max-width: 700px) {
+    header{
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .icono_logo{
+        height: 90px;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+
+    nav a {
+        padding: 5px;
+    }
+  } */
